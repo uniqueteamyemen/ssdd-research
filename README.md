@@ -16,9 +16,9 @@ This repository is the curated **research and validation record** for Scalable S
 | `scripts/` | Reproducible experiment entry points | Re-run named validation paths |
 | `evidence/` | Machine-readable generated result records and summarized gem5 output | Evidence audit, not performance certification |
 
-## Current evidence, with boundaries
+## Current evidence and baseline release
 
-The retained pre-hardware reference suite records canonical ordering checks, 100-epoch replay comparison, fault-containment control-flow cases, ledger-tamper detection, a Python-to-Rust reference-chain comparison, Q32.32 edge cases, and native reference scaling/load measurements. The precise inputs, observed outcomes, and interpretation boundaries are documented in [`docs/validation/prehardware-results.md`](docs/validation/prehardware-results.md).
+The retained pre-hardware reference suite records canonical ordering checks, 100-epoch replay comparison, fault-containment control-flow cases, ledger-tamper detection, a Python-to-Rust reference-chain comparison, Q32.32 edge cases, and native reference scaling/load measurements. The precise inputs, observed outcomes, and interpretation boundaries are documented in [`docs/validation/prehardware-results.md`](docs/validation/prehardware-results.md). The stable publication boundary for this record is [`docs/validation/prehardware-baseline-release.md`](docs/validation/prehardware-baseline-release.md).
 
 The gem5 materials model a selected x86 syscall-emulation workload and a controlled memory-latency configuration. They are **simulation-only artifacts**. See [`docs/validation/gem5-validation-plan.md`](docs/validation/gem5-validation-plan.md) and [`docs/validation/gem5-controlled-matrix-results.md`](docs/validation/gem5-controlled-matrix-results.md).
 
@@ -51,4 +51,4 @@ Contributors should preserve source provenance, record every input/configuration
 
 ## License and access
 
-All rights are reserved unless an explicit written license is added by the repository owner. This repository is released as a **private** research record. Do not redistribute source documents, artifacts, or derived claims without authorization.
+This repository is publicly visible as a research and validation record. **Public visibility is not a grant of reuse rights.** All rights are reserved unless the repository owner adds an explicit written license. Do not redistribute source documents, artifacts, or derived claims without authorization.
