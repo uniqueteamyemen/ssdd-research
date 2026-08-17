@@ -24,7 +24,7 @@ The reference validator must distinguish **rejection** from **state corruption**
 
 ## Artifact Layout
 
-The harness will write each run below `gem5-ssdd/ssdd_validation/results/prehardware/`:
+The harness writes each fresh run below `SSDD_RESULTS_DIR` (default: `.local-results/prehardware/`). Curated, immutable result records are copied into [`evidence/prehardware/`](../../evidence/prehardware/) in a new named directory rather than overwriting previous output:
 
 ```text
 prehardware/

@@ -3,7 +3,7 @@
 **Status:** Completed, simulation-scoped baseline
 **Recorded:** 17 August 2026
 **Simulator:** gem5 25.1.0.1, X86 optimized build
-**Repository revision:** `3b60ac6`
+**gem5 checkout revision:** `3b60ac6`
 
 ## Question
 
@@ -43,11 +43,11 @@ This baseline demonstrates **repeatability of the selected reference workload** 
 
 | Artifact | Location |
 |---|---|
-| Reference workload | `/home/ubuntu/gem5-ssdd/ssdd_validation/ssdd_reference_workload.cpp` |
-| Runner | `/home/ubuntu/gem5-ssdd/ssdd_validation/run_reference_validation.sh` |
-| Run-one summary | `/home/ubuntu/gem5-ssdd/ssdd_validation/results/one.summary` |
-| Run-two summary | `/home/ubuntu/gem5-ssdd/ssdd_validation/results/two.summary` |
-| Simulator configuration/statistics | `/home/ubuntu/gem5-ssdd/ssdd_validation/results/{one,two}/` |
+| Reference workload | [`simulation/gem5/ssdd_reference_workload.cpp`](../../simulation/gem5/ssdd_reference_workload.cpp) |
+| Runner | [`scripts/run_gem5_baseline.sh`](../../scripts/run_gem5_baseline.sh) |
+| Run-one summary | [`evidence/gem5/rerun-2026-08-17/baseline-run-one.summary`](../../evidence/gem5/rerun-2026-08-17/baseline-run-one.summary) |
+| Run-two summary | [`evidence/gem5/rerun-2026-08-17/baseline-run-two.summary`](../../evidence/gem5/rerun-2026-08-17/baseline-run-two.summary) |
+| Result inventory | [`evidence/gem5/rerun-2026-08-17/SHA256SUMS`](../../evidence/gem5/rerun-2026-08-17/SHA256SUMS) |
 
 ## Next experiments
 

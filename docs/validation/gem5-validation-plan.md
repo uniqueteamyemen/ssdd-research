@@ -22,7 +22,7 @@ The resulting artifacts must not be interpreted as proof of SSDD production read
 
 ## Reproducibility controls
 
-The workspace records the gem5 revision, compiler, workload source, command line, workload digest, and output digest. Every experiment is repeatable from the local script under `gem5-ssdd/ssdd_validation`.
+The published record names the gem5 revision, compiler, workload source, command line, workload digest, and output digest. Every experiment is repeatable through [`scripts/run_gem5_baseline.sh`](../../scripts/run_gem5_baseline.sh) or [`scripts/run_gem5_controlled_matrix.sh`](../../scripts/run_gem5_controlled_matrix.sh) after setting `GEM5_ROOT` to a compatible gem5 checkout. New runs write to `.local-results/`; curated output is retained below [`evidence/gem5/`](../../evidence/gem5/).
 
 ## Sources
 
