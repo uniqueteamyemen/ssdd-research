@@ -1,0 +1,3 @@
+case,memory_mode,fault,guest_exit,validation,replay_digest,reference_digest
+cxl-asic-accepted,cxl-asic,none,0,accepted,ff05ec2371488ba1,ff05ec2371488ba1
+cxl-asic-proof-corruption,cxl-asic,proof-corruption,2,rejected,c169add06c40191c,ff05ec2371488ba1

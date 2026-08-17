@@ -1,0 +1,18 @@
+{
+  "domain": "rtl_simulation",
+  "tool": "Icarus Verilog Icarus Verilog version 12.0 (stable) ()",
+  "module": "rtl/ssc/snapshot_epoch_ssc.sv",
+  "testbench": "rtl/ssc/tb_snapshot_epoch_ssc.sv",
+  "accepted_cases": [
+    "16 rotated arrival-order trials",
+    "three-key-prefix source-chiplet tie break",
+    "exact four-key collision rejection",
+    "valid snapshot recovery after rejection"
+  ],
+  "sha256": {
+    "module": "e909a78cd35282b1f198246bf4e477d2da86c02e087718d6ffe92a0cf56badfd",
+    "testbench": "8187f5fd9df07991822cc196cd241b3d4a17ae6e9897620b9d17cf0920279543",
+    "simulation_log": "84a2b58eb68b5ffd121a3abd2db099f528d249291ef6faf5e7273962c24d706f"
+  },
+  "limitations": "Behavioral RTL simulation only. No aggregation, state hash, CXL traffic, synthesis, timing closure, FPGA, real hardware, or production-runtime claim is made."
+}

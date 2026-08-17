@@ -1,0 +1,4 @@
+# Raw simulator and terminal evidence is retained byte-for-byte.  Terminal
+# padding and CRLF-derived whitespace are provenance, not source formatting.
+evidence/cxl-aware/** -whitespace
+evidence/fpga-feasibility/** -whitespace

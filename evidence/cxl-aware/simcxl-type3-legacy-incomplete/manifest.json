@@ -1,0 +1,20 @@
+{
+  "status": "archived_incomplete_unclassified",
+  "execution_domain": "cxl_aware_simulation",
+  "case": "cxl-asic-accepted",
+  "reason_not_accepted": "The retained serial log contains no SSDD workload markers, and the original summary is empty. No replay digest, reference digest, validation verdict, or SSDD guest-exit marker can be derived from this archive.",
+  "retained_artifacts": [
+    "matrix-original-parser-limited.csv",
+    "cases/cxl-asic-accepted/board.pc.com_1.device",
+    "cases/cxl-asic-accepted/citations.bib",
+    "cases/cxl-asic-accepted/config.ini",
+    "cases/cxl-asic-accepted/config.json",
+    "cases/cxl-asic-accepted/readfile",
+    "cases/cxl-asic-accepted/simout",
+    "cases/cxl-asic-accepted/stats.txt",
+    "cases/cxl-asic-accepted/summary-empty-original",
+    "SHA256SUMS"
+  ],
+  "workload_binary_sha256_from_local_archive": "66d4c80a59a84a92f95f6b3b008ca75d8994966c17f7fa72afc6fbb022feddeb",
+  "claim_boundary": "This is retained incomplete simulator evidence only. It is not an accepted SSDD result and does not support a CXL, FPGA, hardware, performance, or production claim."
+}

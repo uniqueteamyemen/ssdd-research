@@ -1,0 +1,60 @@
+=== snapshot_epoch_ssc ===
+
+   Number of wires:              38077
+   Number of wire bits:          42125
+   Number of public wires:          72
+   Number of public wire bits:    2314
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              41894
+     $_ANDNOT_                   10784
+     $_AND_                       1070
+     $_DFFE_PN0N_                    1
+     $_DFFE_PN0P_                   65
+     $_DFFE_PP_                   1792
+     $_DFF_PN0_                      1
+     $_MUX_                      12666
+     $_NAND_                      1952
+     $_NOR_                         90
+     $_NOT_                       3992
+     $_ORNOT_                     1309
+     $_OR_                        3476
+     $_XNOR_                       447
+     $_XOR_                       4249
+
+2.26. Executing CHECK pass (checking for obvious problems).
+Checking module snapshot_epoch_ssc...
+Found and reported 0 problems.
+
+3. Printing statistics.
+
+=== snapshot_epoch_ssc ===
+
+   Number of wires:              38077
+   Number of wire bits:          42125
+   Number of public wires:          72
+   Number of public wire bits:    2314
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              41894
+     $_ANDNOT_                   10784
+     $_AND_                       1070
+     $_DFFE_PN0N_                    1
+     $_DFFE_PN0P_                   65
+     $_DFFE_PP_                   1792
+     $_DFF_PN0_                      1
+     $_MUX_                      12666
+     $_NAND_                      1952
+     $_NOR_                         90
+     $_NOT_                       3992
+     $_ORNOT_                     1309
+     $_OR_                        3476
+     $_XNOR_                       447
+     $_XOR_                       4249
+
+Warnings: 6 unique messages, 6 total
+End of script. Logfile hash: 57cce74161, CPU: user 25.36s system 0.18s, MEM: 252.77 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 21% 5x proc_mux (6 sec), 21% 26x opt_expr (6 sec), ...

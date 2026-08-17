@@ -1,0 +1,52 @@
+{
+  "status": "completed_limited_matrix",
+  "execution_domain": "cxl_aware_simulation",
+  "classification": "simulation_only_model_scoped",
+  "simulator": {
+    "name": "SimCXL",
+    "commit": "edddc2054bcdafdc7537b20c99605f2181bda9dc",
+    "binary_sha256": "009b626a264ec99bc248c332cbcd16b71c35e6908226da6e39141955a738efd8"
+  },
+  "inputs": {
+    "kernel_sha256": "4829b32d218af2434e2458c97565ad41f5669c8043d498c63cd9adce45c62b00",
+    "workload_source_sha256": "2ec429c1bf77fbadb5b1fabcba8c1aec06b10931b73d32df597b572de128f372",
+    "configuration_sha256": "1d7872c9497055ca467525aa7a55b3f31fef893d4bb2bd7372d55e671b40ef86",
+    "guest_binary_sha256": "66d4c80a59a84a92f95f6b3b008ca75d8994966c17f7fa72afc6fbb022feddeb"
+  },
+  "environment": {
+    "boot_cpu": "atomic",
+    "kvm_available": false,
+    "disk_staging": "in-place-limited",
+    "case_set": "limited"
+  },
+  "results": [
+    {
+      "case": "cxl-asic-accepted",
+      "memory_mode": "cxl-asic",
+      "fault": "none",
+      "guest_exit": 0,
+      "validation": "accepted",
+      "replay_digest": "ff05ec2371488ba1",
+      "reference_digest": "ff05ec2371488ba1"
+    },
+    {
+      "case": "cxl-asic-proof-corruption",
+      "memory_mode": "cxl-asic",
+      "fault": "proof-corruption",
+      "fault_record": 18,
+      "guest_exit": 2,
+      "validation": "rejected",
+      "replay_digest": "c169add06c40191c",
+      "reference_digest": "ff05ec2371488ba1"
+    }
+  ],
+  "topology_observation": "Guest serial record shows NUMA node 0 at 2935 MB and node 1 at 8063 MB for both limited cases.",
+  "parser_correction": {
+    "original_artifact": "matrix-original-parser-limited.csv",
+    "reason": "The original runner selected only line-anchored markers although the guest serial transport prepended sh[PID]: and retained CR line endings, producing blank summary fields.",
+    "retained_corrected_artifact": "matrix-derived-from-serial.csv",
+    "preserved_intermediate_artifact": "matrix-derived-initial-crlf-artifact.csv",
+    "runner_fix": "scripts/run_simcxl_type3_matrix.sh normalizes guest prefixes and CR line endings before extracting markers."
+  },
+  "limitations": "This evidence is a CXL-aware full-system simulation in Atomic boot mode. It is not a physical CXL, FPGA, silicon-timing, production-runtime, security-certification, or hardware-performance result."
+}

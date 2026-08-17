@@ -1,0 +1,35 @@
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (4096 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (2048 Mbytes) does not match the address range assigned (4096 Mbytes)
+src/sim/kernel_workload.cc:46: info: kernel located at: /home/ubuntu/simcxl-resources/vmlinux
+      0: board.pc.south_bridge.cmos.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+board.pc.com_1.device: Listening for connections on port 3456
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/dev/intel_8254_timer.cc:128: warn: Reading current count from inactive timer.
+board.remote_gdb: Listening for connections on port 7000
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 23.1.0.0
+gem5 compiled Aug 17 2026 15:40:13
+gem5 started Aug 17 2026 17:07:12
+gem5 executing on db71298c03d4, pid 75024
+command line: /home/ubuntu/simcxl-ssdd/build/X86/gem5.opt -d /home/ubuntu/ssdd-research/.local-results-cxl-service-rerun/simcxl-type3/cxl-asic-accepted/m5out /home/ubuntu/ssdd-research/simulation/cxl/simcxl_type3_ssdd.py --kernel=/home/ubuntu/simcxl-resources/vmlinux --disk-image=/home/ubuntu/simcxl-resources/parsec.img --memory-mode=cxl-asic --fault=none --fault-record=18 --boot-cpu=atomic
+
+SSDD_SIMCXL_TYPE3_CONFIG v0.1
+memory_mode=cxl-asic
+fault=none
+fault_record=0
+boot_cpu=atomic
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/dev/x86/pc.cc:117: warn: Don't know what interrupt to clear for console.
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'sgdt_Ms' unimplemented
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fninit' unimplemented
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+src/arch/generic/debugfaults.hh:145: warn: MOVNTDQ: Ignoring non-temporal hint, modeling as cacheable!
+src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
+switching cpus
+src/sim/simulate.cc:199: info: Entering event queue @ 2871358945956.  Starting simulation...
+build/X86/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'prefetch_nta' unimplemented
+warn: User-specified generator/function list for the exit event'exit' has ended. Using the default generator.

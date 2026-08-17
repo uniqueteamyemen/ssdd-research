@@ -1,0 +1,1 @@
+m5 exit; echo SSDD_CXL_NUMA_BEGIN; numactl -H; echo SSDD_CXL_NUMA_END; m5 resetstats; numactl --cpunodebind=0 --membind=1 /home/ssdd/ssdd_reference_workload --fault=none --fault-record=18; status=$?; echo SSDD_GUEST_EXIT=$status; m5 dumpstats; m5 exit

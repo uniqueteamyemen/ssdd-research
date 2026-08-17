@@ -1,0 +1,13 @@
+[Unit]
+Description=Execute the gem5 SSDD readfile payload once
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/sbin/m5 readfile > /run/ssdd-gem5-readfile.sh && /bin/sh /run/ssdd-gem5-readfile.sh'
+StandardOutput=journal+console
+StandardError=journal+console
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

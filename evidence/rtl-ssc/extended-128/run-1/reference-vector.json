@@ -1,0 +1,68 @@
+{
+  "vector": [
+    {
+      "enterprise_type": 3,
+      "node_id": 6,
+      "payload_q32": 25769803776,
+      "sequence_id": 1,
+      "source_chiplet_id": 3,
+      "structural_dim": 0
+    },
+    {
+      "enterprise_type": 3,
+      "node_id": 3,
+      "payload_q32": 12884901888,
+      "sequence_id": 1,
+      "source_chiplet_id": 10,
+      "structural_dim": 0
+    },
+    {
+      "enterprise_type": 3,
+      "node_id": 1,
+      "payload_q32": 4294967296,
+      "sequence_id": 2,
+      "source_chiplet_id": 1,
+      "structural_dim": 0
+    },
+    {
+      "enterprise_type": 0,
+      "node_id": 5,
+      "payload_q32": 21474836480,
+      "sequence_id": 8,
+      "source_chiplet_id": 9,
+      "structural_dim": 1
+    },
+    {
+      "enterprise_type": 0,
+      "node_id": 2,
+      "payload_q32": 8589934592,
+      "sequence_id": 9,
+      "source_chiplet_id": 9,
+      "structural_dim": 1
+    },
+    {
+      "enterprise_type": 0,
+      "node_id": 7,
+      "payload_q32": 30064771072,
+      "sequence_id": 1,
+      "source_chiplet_id": 1,
+      "structural_dim": 2
+    },
+    {
+      "enterprise_type": 0,
+      "node_id": 4,
+      "payload_q32": 17179869184,
+      "sequence_id": 1,
+      "source_chiplet_id": 2,
+      "structural_dim": 2
+    },
+    {
+      "enterprise_type": 1,
+      "node_id": 0,
+      "payload_q32": 0,
+      "sequence_id": 3,
+      "source_chiplet_id": 7,
+      "structural_dim": 2
+    }
+  ]
+}

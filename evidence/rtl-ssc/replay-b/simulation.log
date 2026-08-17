@@ -1,0 +1,5 @@
+RTL_SSC_TEST shuffled_trials=16 status=PASS
+RTL_SSC_TEST prefix_tie_break status=PASS
+RTL_SSC_TEST exact_four_key_collision status=PASS
+RTL_SSC_TEST recovery_after_reject status=PASS
+RTL_SSC_RESULT status=PASS

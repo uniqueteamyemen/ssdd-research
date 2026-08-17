@@ -1,0 +1,23 @@
+{
+  "status": "accepted_synthesis_feasibility_only",
+  "classification": "synthesis_feasibility",
+  "execution_domain": "none",
+  "tool": "Yosys 0.33 (git sha1 2584903a060)",
+  "command": "yosys -p 'read_verilog -sv rtl/ssc/snapshot_epoch_ssc.sv; synth -top snapshot_epoch_ssc; stat'",
+  "source": {
+    "path": "rtl/ssc/snapshot_epoch_ssc.sv",
+    "sha256": "e909a78cd35282b1f198246bf4e477d2da86c02e087718d6ffe92a0cf56badfd"
+  },
+  "generic_netlist": {
+    "total_cells": 41894,
+    "reported_memories": 0,
+    "structural_check": "Found and reported 0 problems."
+  },
+  "artifacts": [
+    "yosys-version.txt",
+    "source.sha256",
+    "synthesis.log",
+    "resource-summary.txt"
+  ],
+  "limitations": "Generic technology-unmapped transformation only. No named FPGA target, constraints, place-and-route, timing closure, bitstream, board execution, CXL IP, CXL link, or hardware result is represented."
+}

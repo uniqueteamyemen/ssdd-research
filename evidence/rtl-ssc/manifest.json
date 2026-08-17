@@ -1,0 +1,37 @@
+{
+  "domain": "rtl_simulation",
+  "artifact": "bounded_snapshot_epoch_ssc",
+  "tool": "Icarus Verilog 12.0 (stable)",
+  "source": {
+    "module": "rtl/ssc/snapshot_epoch_ssc.sv",
+    "module_sha256": "e909a78cd35282b1f198246bf4e477d2da86c02e087718d6ffe92a0cf56badfd",
+    "testbench": "rtl/ssc/tb_snapshot_epoch_ssc.sv",
+    "testbench_sha256": "8187f5fd9df07991822cc196cd241b3d4a17ae6e9897620b9d17cf0920279543"
+  },
+  "replays": [
+    {
+      "id": "replay-a",
+      "log": "replay-a/simulation.log",
+      "simulation_log_sha256": "84a2b58eb68b5ffd121a3abd2db099f528d249291ef6faf5e7273962c24d706f",
+      "accepted": true
+    },
+    {
+      "id": "replay-b",
+      "log": "replay-b/simulation.log",
+      "simulation_log_sha256": "84a2b58eb68b5ffd121a3abd2db099f528d249291ef6faf5e7273962c24d706f",
+      "accepted": true
+    }
+  ],
+  "acceptance": {
+    "logs_byte_identical": true,
+    "shuffled_arrival_trials": 16,
+    "prefix_tie_break": "accepted",
+    "exact_four_key_collision": "rejected_without_output",
+    "valid_recovery_after_reject": "accepted"
+  },
+  "simulator_notes": [
+    "Icarus emitted a time-unit advisory for the design module.",
+    "Icarus emitted a synthesis-oriented advisory for a loop that compares against the runtime packet count; no synthesis claim is made."
+  ],
+  "limitations": "Behavioral RTL simulation only. This result does not validate SSDD aggregation, audit hashing, CXL traffic, synthesis, timing closure, FPGA execution, real CXL hardware, compliance, or a production runtime."
+}

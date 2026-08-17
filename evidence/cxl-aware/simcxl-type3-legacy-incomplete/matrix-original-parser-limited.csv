@@ -1,0 +1,2 @@
+case,memory_mode,fault,fault_record,guest_exit,validation,replay_digest,reference_digest,sim_exit
+cxl-asic-accepted,cxl-asic,none,18,0,,,,0

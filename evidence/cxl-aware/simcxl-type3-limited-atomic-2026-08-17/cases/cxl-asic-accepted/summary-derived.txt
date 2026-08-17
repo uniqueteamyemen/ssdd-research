@@ -1,0 +1,11 @@
+SSDD_CXL_NUMA_BEGIN
+SSDD_CXL_NUMA_END
+SSDD_REFERENCE_WORKLOAD v0.1
+stages=5 engines=7 operations=35
+replay_digest=ff05ec2371488ba1
+reference_digest=ff05ec2371488ba1
+memory_probe=6ee58deb8743b0f8
+fault_mode=none
+fault_record=0
+validation=accepted
+SSDD_GUEST_EXIT=0

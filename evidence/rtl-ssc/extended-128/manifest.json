@@ -1,0 +1,23 @@
+{
+  "domain": "rtl_simulation",
+  "tool": "Icarus Verilog Icarus Verilog version 12.0 (stable) ()",
+  "module": "rtl/ssc/snapshot_epoch_ssc.sv",
+  "testbench": "rtl/ssc/tb_snapshot_epoch_ssc.sv",
+  "accepted_cases": [
+    "128 deterministic affine arrival-order trials across 32 complete unique permutations",
+    "three-key-prefix source-chiplet tie break",
+    "exact four-key collision rejection",
+    "valid snapshot recovery after rejection",
+    "two independent simulator invocations with byte-identical traces",
+    "independent Python trace-vector comparison"
+  ],
+  "sha256": {
+    "module": "e909a78cd35282b1f198246bf4e477d2da86c02e087718d6ffe92a0cf56badfd",
+    "testbench": "72cb64ff55c8dcb674122fa61ee5bf8ef481cf3b3e7c6f51bc0b063d48debc2c",
+    "simulation_log": "626b2b530ff79c57771d919e3b380d87955f28c4ce498f7a7891fb32b6a6eae1",
+    "reference_vector": "3c9d200957f6647cbf1e60b61f98495f4461b8990474697c712f84e5bd793971",
+    "run_1_log": "626b2b530ff79c57771d919e3b380d87955f28c4ce498f7a7891fb32b6a6eae1",
+    "run_2_log": "626b2b530ff79c57771d919e3b380d87955f28c4ce498f7a7891fb32b6a6eae1"
+  },
+  "limitations": "Behavioral RTL simulation only. No aggregation, state hash, CXL traffic, synthesis, timing closure, FPGA, real hardware, or production-runtime claim is made."
+}
