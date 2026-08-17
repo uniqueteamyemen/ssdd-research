@@ -1,0 +1,8 @@
+stages=5 engines=7 operations=35
+replay_digest=ec824874337849a5
+reference_digest=ff05ec2371488ba1
+memory_probe=6ee58deb8743b0f8
+fault_mode=proof-corruption
+fault_record=35
+validation=rejected
+gem5_exit=0

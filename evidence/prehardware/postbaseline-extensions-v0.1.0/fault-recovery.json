@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "checkpoint_epoch": 11,
+      "checkpoint_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "fault": "packet_drop",
+      "post_checkpoint_suffix_equal": true,
+      "resumed_chain_accepted": true,
+      "resumed_chain_reason": "accepted"
+    },
+    {
+      "checkpoint_epoch": 11,
+      "checkpoint_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "fault": "node_delay",
+      "post_checkpoint_suffix_equal": true,
+      "resumed_chain_accepted": true,
+      "resumed_chain_reason": "accepted"
+    },
+    {
+      "checkpoint_epoch": 11,
+      "checkpoint_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "fault": "aggregator_failure",
+      "post_checkpoint_suffix_equal": true,
+      "resumed_chain_accepted": true,
+      "resumed_chain_reason": "accepted"
+    },
+    {
+      "checkpoint_epoch": 11,
+      "checkpoint_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "fault": "corrupted_state_ledger",
+      "post_checkpoint_suffix_equal": true,
+      "resumed_chain_accepted": true,
+      "resumed_chain_reason": "accepted"
+    }
+  ],
+  "domain": "native_reference",
+  "limitation": "Faults are represented as no-commit/deferred cases in the reference model; no process, network, or storage fault injector is exercised here."
+}

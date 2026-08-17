@@ -1,4 +1,4 @@
-# SSDD Controlled gem5 Matrix — Preliminary Research Record
+# SSDD Controlled gem5 Matrix — Research Record
 
 **Status:** completed model-scoped simulation artifact.
 **Interpretation:** this record reports outcomes from a fixed SSDD reference workload in gem5. It is not a statement about physical hardware, CXL traffic, security certification, fault rates, or production readiness.
@@ -17,9 +17,9 @@ The experiment uses the portable SSDD reference workload: five logical stages, s
 
 | Fixed latency | Simulated ticks per run | Change from 10 ns |
 |---|---:|---:|
-| 10 ns | 1,346,204,000 | baseline |
-| 50 ns | 1,636,604,000 | +290,400,000 (+21.5717%) |
-| 100 ns | 1,999,604,000 | +653,400,000 (+48.5364%) |
+| 10 ns | 1,346,752,000 | baseline |
+| 50 ns | 1,637,792,000 | +291,040,000 (+21.6105%) |
+| 100 ns | 2,001,592,000 | +654,840,000 (+48.6236%) |
 
 The simulated-tick figures describe the selected gem5 model and workload. They are **not** a conversion to wall-clock performance, physical memory latency, CXL link behavior, or a performance prediction for a deployed implementation.
 
@@ -43,4 +43,4 @@ No stronger hardware, security, production, HC-CXL, or CXL-compliance statement 
 
 ## Artifact locations
 
-The machine-readable matrix is retained at `/home/ubuntu/gem5-ssdd/ssdd_validation/results/controlled-matrix/matrix.csv`. The runner is `run_controlled_matrix.sh`; the configurable workload source is `ssdd_reference_workload.cpp`; the gem5 configuration is `controlled_se.py`.
+The retained rerun record is [`evidence/gem5/rerun-2026-08-17/controlled-matrix.csv`](../../evidence/gem5/rerun-2026-08-17/controlled-matrix.csv), with a per-case summary for every run and an inventory in [`SHA256SUMS`](../../evidence/gem5/rerun-2026-08-17/SHA256SUMS). The runner is [`scripts/run_gem5_controlled_matrix.sh`](../../scripts/run_gem5_controlled_matrix.sh); the workload source is [`simulation/gem5/ssdd_reference_workload.cpp`](../../simulation/gem5/ssdd_reference_workload.cpp); and the gem5 configuration is [`simulation/gem5/controlled_se.py`](../../simulation/gem5/controlled_se.py).

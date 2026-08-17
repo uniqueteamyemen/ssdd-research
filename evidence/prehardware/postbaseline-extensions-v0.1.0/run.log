@@ -1,0 +1,4 @@
+{"final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "status": "accepted"}
+{"domain": "native_reference_independent_processes", "epochs": 100, "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "full_hash_chain_equal": true, "required_fields": ["accepted", "epochs", "full_chain", "final_hash"], "run_a_accepted": true, "run_b_accepted": true}
+{"domains": ["native_python_reference", "native_rust_reference"], "epochs": 100, "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "full_hash_chain_equal": true, "limitation": "Rust source was retained for this explicit reference test because no supplied Rust implementation was present."}
+{"points": 11, "status": "accepted"}

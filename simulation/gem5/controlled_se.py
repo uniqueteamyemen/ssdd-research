@@ -17,7 +17,12 @@ from m5.util import addToPath, fatal
 
 from gem5.isas import ISA
 
-CONFIG_ROOT = Path(__file__).resolve().parents[1] / "configs"
+GEM5_ROOT = Path(os.environ.get("GEM5_ROOT", "")).expanduser()
+if not GEM5_ROOT.is_dir():
+    fatal("controlled_se.py requires GEM5_ROOT to name a compatible gem5 checkout")
+CONFIG_ROOT = GEM5_ROOT / "configs"
+if not CONFIG_ROOT.is_dir():
+    fatal(f"Missing gem5 configuration directory: {CONFIG_ROOT}")
 addToPath(str(CONFIG_ROOT))
 
 from common import CacheConfig, CpuConfig, MemConfig, ObjectList, Options, Simulation  # noqa: E402

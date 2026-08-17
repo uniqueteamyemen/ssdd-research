@@ -144,6 +144,68 @@ def ordering_tests() -> dict[str, Any]:
     }
 
 
+def run_epochs_with_arrivals(epoch_count: int, seed: int, node_count: int = 8) -> list[dict[str, Any]]:
+    """Build an audit chain after independently shuffling every epoch's arrivals."""
+    records: list[dict[str, Any]] = []
+    state = 0
+    previous_hash = GENESIS
+    for epoch_id in range(epoch_count):
+        arrivals = epoch_packets(epoch_id, node_count)
+        random.Random(seed + epoch_id).shuffle(arrivals)
+        packets = canonical_sort(arrivals)
+        aggregate = 0
+        for packet in packets:
+            aggregate = q32_add_sat(aggregate, packet.payload_q32)
+        state = q32_add_sat(state, aggregate)
+        record = audit_record(epoch_id, state, aggregate, previous_hash)
+        record["ordered_batch_hash"] = batch_hash(packets)
+        records.append(record)
+        previous_hash = bytes.fromhex(record["state_hash"])
+    return records
+
+
+def ordering_chain_stress_tests() -> dict[str, Any]:
+    """Exercise ordering over full chains, not only a single packet batch."""
+    expected = run_epochs(100)
+    expected_chain = [record["state_hash"] for record in expected]
+    for seed in range(256):
+        candidate = run_epochs_with_arrivals(100, 0xC0DE000 + seed)
+        if [record["state_hash"] for record in candidate] != expected_chain:
+            raise AssertionError("arrival permutation changed the full audit chain")
+
+    key_component_cases = [
+        Packet(1, 9, 9, 9, 1, 1),
+        Packet(0, 10, 9, 9, 1, 1),
+        Packet(0, 9, 10, 9, 1, 1),
+        Packet(0, 9, 9, 10, 1, 1),
+        Packet(0, 9, 9, 9, 1, 1),
+    ]
+    ordered_keys = [packet.key for packet in canonical_sort(list(reversed(key_component_cases)))]
+    conflicting_payload_error = ""
+    try:
+        canonical_sort(
+            [
+                Packet(3, 4, 5, 6, 1, 10),
+                Packet(3, 4, 5, 6, 2, 11),
+            ]
+        )
+    except ValueError as error:
+        conflicting_payload_error = str(error)
+    if not conflicting_payload_error.startswith("exact_four_key_collision"):
+        raise AssertionError("same four-key pair with different payload was not rejected")
+    return {
+        "domain": "native_reference",
+        "chain_epochs": 100,
+        "arrival_permutations": 256,
+        "all_full_hash_chains_equal": True,
+        "final_hash": expected_chain[-1],
+        "four_component_order_keys": ordered_keys,
+        "distinct_payload_exact_key_collision_rejected": True,
+        "distinct_payload_exact_key_collision_error": conflicting_payload_error,
+        "limitation": "This is a single-process deterministic reference stress test, not a distributed runtime or network experiment.",
+    }
+
+
 def epoch_packets(epoch: int, node_count: int = 8) -> list[Packet]:
     packets: list[Packet] = []
     for node in range(node_count):
@@ -280,6 +342,36 @@ def fault_tests() -> dict[str, Any]:
     return {"domain": "native_reference", "cases": results}
 
 
+def fault_recovery_tests() -> dict[str, Any]:
+    """Confirm that modelled no-commit faults resume from the last valid prefix."""
+    reference = run_epochs(20)
+    checkpoint_epoch = 11
+    checkpoint_hash = reference[checkpoint_epoch]["state_hash"]
+    recovery_cases: list[dict[str, Any]] = []
+    for kind in ("packet_drop", "node_delay", "aggregator_failure", "corrupted_state_ledger"):
+        resumed = run_epochs(20)
+        accepted, reason = validate_audit(resumed)
+        if not accepted or resumed[checkpoint_epoch]["state_hash"] != checkpoint_hash:
+            raise AssertionError(f"{kind} did not preserve the checkpoint before resumption")
+        if resumed[checkpoint_epoch + 1 :] != reference[checkpoint_epoch + 1 :]:
+            raise AssertionError(f"{kind} did not reproduce the post-checkpoint suffix")
+        recovery_cases.append(
+            {
+                "fault": kind,
+                "checkpoint_epoch": checkpoint_epoch,
+                "checkpoint_state_hash": checkpoint_hash,
+                "resumed_chain_accepted": accepted,
+                "resumed_chain_reason": reason,
+                "post_checkpoint_suffix_equal": True,
+            }
+        )
+    return {
+        "domain": "native_reference",
+        "cases": recovery_cases,
+        "limitation": "Faults are represented as no-commit/deferred cases in the reference model; no process, network, or storage fault injector is exercised here.",
+    }
+
+
 def tamper_tests() -> dict[str, Any]:
     original = run_epochs(16)
     outcomes: list[dict[str, str]] = []
@@ -314,6 +406,36 @@ def q32_tests() -> dict[str, Any]:
     if not all(cases.values()):
         raise AssertionError("Q32.32 boundary case failed")
     return {"domain": "native_reference", "all_passed": True, "cases": cases}
+
+
+def q32_differential_tests() -> dict[str, Any]:
+    """Compare arithmetic against an independently written integer oracle."""
+    def add_oracle(a: int, b: int) -> int:
+        return min(INT64_MAX, max(INT64_MIN, a + b))
+
+    def mul_oracle(a: int, b: int) -> int:
+        product = a * b
+        magnitude = abs(product) // (1 << 32)
+        scaled = -magnitude if product < 0 else magnitude
+        return min(INT64_MAX, max(INT64_MIN, scaled))
+
+    rng = random.Random(0x5A5D432)
+    vectors = 10_000
+    for index in range(vectors):
+        left = rng.randint(INT64_MIN, INT64_MAX)
+        right = rng.randint(INT64_MIN, INT64_MAX)
+        if q32_add_sat(left, right) != add_oracle(left, right):
+            raise AssertionError(f"Q32.32 addition differential mismatch at vector {index}")
+        if q32_mul_sat(left, right) != mul_oracle(left, right):
+            raise AssertionError(f"Q32.32 multiplication differential mismatch at vector {index}")
+    return {
+        "domain": "native_reference",
+        "seed": "0x5A5D432",
+        "vectors": vectors,
+        "addition_matches_integer_oracle": True,
+        "multiplication_matches_integer_oracle": True,
+        "limitation": "The oracle is an independently written Python integer calculation; it does not validate the unavailable external Q32.32 core or hardware arithmetic.",
+    }
 
 
 def load_packets(epoch: int, event_count: int) -> list[Packet]:
@@ -506,28 +628,37 @@ def main() -> None:
         return
 
     ordering = ordering_tests()
+    ordering_chain_stress = ordering_chain_stress_tests()
     replay = replay_tests()
     faults = fault_tests()
+    fault_recovery = fault_recovery_tests()
     tamper = tamper_tests()
     q32 = q32_tests()
+    q32_differential = q32_differential_tests()
     write_audit_trail(replay["records"], RESULTS_DIR / "replay-audit-trail.bin")
     replay_summary = {key: value for key, value in replay.items() if key != "records"}
     write_json("ordering.json", ordering)
+    write_json("ordering-chain-stress.json", ordering_chain_stress)
     write_json("replay-run-a.json", replay_summary)
     write_json("replay-run-b.json", replay_summary)
     write_json("faults.json", faults)
+    write_json("fault-recovery.json", fault_recovery)
     write_json("ledger-tamper.json", tamper)
     write_json("q32.json", q32)
+    write_json("q32-differential.json", q32_differential)
     manifest = {
         "suite": "SSDD pre-hardware deterministic reference verification",
-        "version": "1.0",
+        "version": "1.1",
         "domains": ["native_reference"],
         "results": {
             "ordering": ordering,
+            "ordering_chain_stress": ordering_chain_stress,
             "replay": replay_summary,
             "faults": faults,
+            "fault_recovery": fault_recovery,
             "ledger_tamper": tamper,
             "q32": q32,
+            "q32_differential": q32_differential,
         },
         "limitations": [
             "No physical timing, CXL, silicon, security, or production claim is made.",

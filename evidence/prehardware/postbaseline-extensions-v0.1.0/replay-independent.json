@@ -1,0 +1,14 @@
+{
+  "domain": "native_reference_independent_processes",
+  "epochs": 100,
+  "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2",
+  "full_hash_chain_equal": true,
+  "required_fields": [
+    "accepted",
+    "epochs",
+    "full_chain",
+    "final_hash"
+  ],
+  "run_a_accepted": true,
+  "run_b_accepted": true
+}

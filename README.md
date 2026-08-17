@@ -18,9 +18,11 @@ This repository is the curated **research and validation record** for Scalable S
 
 ## Current evidence and baseline release
 
-The retained pre-hardware reference suite records canonical ordering checks, 100-epoch replay comparison, fault-containment control-flow cases, ledger-tamper detection, a Python-to-Rust reference-chain comparison, Q32.32 edge cases, and native reference scaling/load measurements. The precise inputs, observed outcomes, and interpretation boundaries are documented in [`docs/validation/prehardware-results.md`](docs/validation/prehardware-results.md). The stable publication boundary for this record is [`docs/validation/prehardware-baseline-release.md`](docs/validation/prehardware-baseline-release.md).
+The retained pre-hardware reference suite records canonical ordering checks, 100-epoch replay comparison, fault-containment control-flow cases, ledger-tamper detection, a Python-to-Rust reference-chain comparison, Q32.32 edge cases, and native reference scaling/load measurements. The precise inputs, observed outcomes, and interpretation boundaries are documented in [`docs/validation/prehardware-results.md`](docs/validation/prehardware-results.md). The stable publication boundary for this record is the annotated tag [`prehardware-baseline-v0.1.0`](docs/validation/prehardware-baseline-release.md).
 
-The gem5 materials model a selected x86 syscall-emulation workload and a controlled memory-latency configuration. They are **simulation-only artifacts**. See [`docs/validation/gem5-validation-plan.md`](docs/validation/gem5-validation-plan.md) and [`docs/validation/gem5-controlled-matrix-results.md`](docs/validation/gem5-controlled-matrix-results.md).
+Post-tag supplementary checks add full-chain arrival-order stress, modelled no-commit checkpoint resumption, and a deterministic Q32.32 integer-oracle comparison. They are kept in a separate result record so the frozen baseline remains unambiguous; see [`docs/validation/postbaseline-extension-results.md`](docs/validation/postbaseline-extension-results.md) and [`evidence/prehardware/postbaseline-extensions-v0.1.0/`](evidence/prehardware/postbaseline-extensions-v0.1.0/).
+
+The gem5 materials model a selected x86 syscall-emulation workload and a controlled memory-latency configuration. They are **simulation-only artifacts**. See [`docs/validation/gem5-validation-plan.md`](docs/validation/gem5-validation-plan.md), [`docs/validation/gem5-controlled-matrix-results.md`](docs/validation/gem5-controlled-matrix-results.md), and the retained rerun files in [`evidence/gem5/rerun-2026-08-17/`](evidence/gem5/rerun-2026-08-17/).
 
 ## Reproduce the retained reference suite
 
