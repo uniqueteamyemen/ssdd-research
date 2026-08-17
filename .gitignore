@@ -1,0 +1,34 @@
+# Python and test by-products
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.coverage
+htmlcov/
+
+# Rust build products
+target/
+
+# gem5 and experiment products not intentionally retained as evidence
+build/
+m5out/
+.local-results/
+results/**/config.ini
+results/**/config.json
+results/**/stats.txt
+results/**/simout
+results/**/citations.bib
+results/**/*.bin
+*.opt
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key

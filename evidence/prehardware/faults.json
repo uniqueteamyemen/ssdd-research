@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "affected_epoch": 12,
+      "commit_created": false,
+      "fault": "packet_drop",
+      "last_valid_epoch": 11,
+      "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "last_valid_state_preserved": true,
+      "reason": "incomplete_batch_rejected",
+      "result": "rejected"
+    },
+    {
+      "affected_epoch": 12,
+      "commit_created": false,
+      "fault": "node_delay",
+      "last_valid_epoch": 11,
+      "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "last_valid_state_preserved": true,
+      "reason": "late_node_deferred_to_next_epoch",
+      "result": "rejected"
+    },
+    {
+      "affected_epoch": 12,
+      "commit_created": false,
+      "fault": "aggregator_failure",
+      "last_valid_epoch": 11,
+      "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "last_valid_state_preserved": true,
+      "reason": "aggregator_unavailable_no_commit",
+      "result": "rejected"
+    },
+    {
+      "affected_epoch": 12,
+      "commit_created": false,
+      "fault": "corrupted_state_ledger",
+      "last_valid_epoch": 11,
+      "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+      "last_valid_state_preserved": true,
+      "reason": "aggregate_or_state_mismatch",
+      "result": "rejected"
+    }
+  ],
+  "domain": "native_reference"
+}

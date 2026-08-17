@@ -1,0 +1,122 @@
+{
+  "domains": [
+    "native_reference"
+  ],
+  "limitations": [
+    "No physical timing, CXL, silicon, security, or production claim is made.",
+    "The Q32.32 and ledger routines are retained reference implementations because the uploaded engine imports an unavailable q32_32_core module."
+  ],
+  "results": {
+    "faults": {
+      "cases": [
+        {
+          "affected_epoch": 12,
+          "commit_created": false,
+          "fault": "packet_drop",
+          "last_valid_epoch": 11,
+          "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+          "last_valid_state_preserved": true,
+          "reason": "incomplete_batch_rejected",
+          "result": "rejected"
+        },
+        {
+          "affected_epoch": 12,
+          "commit_created": false,
+          "fault": "node_delay",
+          "last_valid_epoch": 11,
+          "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+          "last_valid_state_preserved": true,
+          "reason": "late_node_deferred_to_next_epoch",
+          "result": "rejected"
+        },
+        {
+          "affected_epoch": 12,
+          "commit_created": false,
+          "fault": "aggregator_failure",
+          "last_valid_epoch": 11,
+          "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+          "last_valid_state_preserved": true,
+          "reason": "aggregator_unavailable_no_commit",
+          "result": "rejected"
+        },
+        {
+          "affected_epoch": 12,
+          "commit_created": false,
+          "fault": "corrupted_state_ledger",
+          "last_valid_epoch": 11,
+          "last_valid_state_hash": "1aeb063e6e57c9a3baa864a8a57db268963986b3bad68ae2ab81a296e9588c43",
+          "last_valid_state_preserved": true,
+          "reason": "aggregate_or_state_mismatch",
+          "result": "rejected"
+        }
+      ],
+      "domain": "native_reference"
+    },
+    "ledger_tamper": {
+      "domain": "native_reference",
+      "tamper_cases": [
+        {
+          "detected": "true",
+          "field": "state_hash",
+          "reason": "state_hash_mismatch"
+        },
+        {
+          "detected": "true",
+          "field": "previous_hash",
+          "reason": "previous_hash_mismatch"
+        },
+        {
+          "detected": "true",
+          "field": "aggregate",
+          "reason": "aggregate_or_state_mismatch"
+        },
+        {
+          "detected": "true",
+          "field": "epoch_id",
+          "reason": "epoch_sequence_mismatch"
+        }
+      ]
+    },
+    "ordering": {
+      "all_permutations_equal": true,
+      "domain": "native_reference",
+      "exact_four_key_duplicate_error": "exact_four_key_collision:(4, 2, 99, 9)",
+      "exact_four_key_duplicate_rejected": true,
+      "ordered_batch_hash": "8fd17060a85f190a0d977fda225da4528636215e4b25d7038c63d584ec072930",
+      "packets_per_permutation": 48,
+      "permutations": 128,
+      "prefix_collision_sorted_source_ids": [
+        3,
+        7,
+        9
+      ]
+    },
+    "q32": {
+      "all_passed": true,
+      "cases": {
+        "boundary_negative": true,
+        "boundary_positive": true,
+        "max_plus_one": true,
+        "min_minus_one": true,
+        "multiplication_overflow": true,
+        "negative_overflow": true,
+        "negative_rounding_toward_zero": true,
+        "positive_overflow": true,
+        "zero": true
+      },
+      "domain": "native_reference"
+    },
+    "replay": {
+      "domain": "native_reference",
+      "epochs": 100,
+      "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2",
+      "full_record_sequence_equal": true,
+      "run_a_accepted": true,
+      "run_a_reason": "accepted",
+      "run_b_accepted": true,
+      "run_b_reason": "accepted"
+    }
+  },
+  "suite": "SSDD pre-hardware deterministic reference verification",
+  "version": "1.0"
+}
