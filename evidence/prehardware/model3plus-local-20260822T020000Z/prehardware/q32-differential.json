@@ -1,0 +1,8 @@
+{
+  "addition_matches_integer_oracle": true,
+  "domain": "native_reference",
+  "limitation": "The oracle is an independently written Python integer calculation; it does not validate the unavailable external Q32.32 core or hardware arithmetic.",
+  "multiplication_matches_integer_oracle": true,
+  "seed": "0x5A5D432",
+  "vectors": 10000
+}

@@ -1,0 +1,67 @@
+
++ /home/ubuntu/ssdd-research/scripts/run_prehardware_core.sh
+{"final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "status": "accepted"}
+{"domain": "native_reference_independent_processes", "epochs": 100, "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "full_hash_chain_equal": true, "required_fields": ["accepted", "epochs", "full_chain", "final_hash"], "run_a_accepted": true, "run_b_accepted": true}
+Pre-hardware core suite completed. Local output: /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware
+
++ rustc
++ -O
++ /home/ubuntu/ssdd-research/reference/rust/prehardware_ledger_reference.rs
++ -o
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/prehardware_ledger_reference
+
++ bash
++ -c
++ python3\ \"\$1\"\ --mode\ replay\ \>\ \"\$2\"
++ _
++ /home/ubuntu/ssdd-research/reference/python/prehardware_reference.py
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/python-ledger.json
+
++ bash
++ -c
++ \"\$1\"\ \>\ \"\$2\"
++ _
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/prehardware_ledger_reference
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/rust-ledger.json
+
++ python3
++ /home/ubuntu/ssdd-research/reference/python/prehardware_reference.py
++ --mode
++ compare-cross-language
++ --first
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/python-ledger.json
++ --second
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/prehardware/rust-ledger.json
+{"domains": ["native_python_reference", "native_rust_reference"], "epochs": 100, "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2", "full_hash_chain_equal": true, "limitation": "Rust source was retained for this explicit reference test because no supplied Rust implementation was present."}
+
++ g++
++ -O2
++ -std=c++20
++ /home/ubuntu/ssdd-research/simulation/gem5/ssdd_reference_workload.cpp
++ -o
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/proof-integrity-workload
+
++ bash
++ -c
++ \"\$1\"\ --fault=none\ \>\ \"\$2\"
++ _
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/proof-integrity-workload
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/proof-accepted.txt
+
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z/proof-integrity-workload
++ --fault=proof-corruption
++ --fault-record=18
+SSDD_REFERENCE_WORKLOAD v0.1
+stages=5 engines=7 operations=35
+replay_digest=c169add06c40191c
+reference_digest=ff05ec2371488ba1
+memory_probe=6ee58deb8743b0f8
+fault_mode=proof-corruption
+fault_record=18
+validation=rejected
+
++ python3
++ /home/ubuntu/ssdd-research/scripts/verify_model3plus_local_campaign.py
++ --outdir
++ /home/ubuntu/ssdd-research/.local-results/model3plus-local-20260822T020000Z
+{"packages": ["A", "B", "C", "D", "E"], "status": "accepted"}

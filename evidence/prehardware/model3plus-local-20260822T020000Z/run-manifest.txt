@@ -1,0 +1,15 @@
+campaign=SSDD Model 3+ local evidence packages A-E
+campaign_scope=behavioral_and_integrity_reference_only
+started_utc=2026-08-21T22:13:41Z
+repository_commit=53bd15a0ae250efc8227fbcbe06a5d802cc001fe
+repository_status=?? .local-results-cxl-service-rerun/;?? .local-results-cxl/;?? docs/validation/model3plus-local-campaign-plan.md;?? scripts/run_model3plus_local_campaign.sh;?? scripts/verify_model3plus_local_campaign.py;
+python=Python 3.12.3
+rustc=rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+gxx=g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+host_kernel=Linux 6.18.38+ x86_64 GNU/Linux
+kvm_available=false
+performance_measurement=false
+hardware_claim=false
+external_access=false
+proof_corruption_exit=2
+completed_utc=2026-08-21T22:13:45Z

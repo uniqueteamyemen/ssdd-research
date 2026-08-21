@@ -1,0 +1,25 @@
+{
+  "domain": "native_reference",
+  "tamper_cases": [
+    {
+      "detected": "true",
+      "field": "state_hash",
+      "reason": "state_hash_mismatch"
+    },
+    {
+      "detected": "true",
+      "field": "previous_hash",
+      "reason": "previous_hash_mismatch"
+    },
+    {
+      "detected": "true",
+      "field": "aggregate",
+      "reason": "aggregate_or_state_mismatch"
+    },
+    {
+      "detected": "true",
+      "field": "epoch_id",
+      "reason": "epoch_sequence_mismatch"
+    }
+  ]
+}

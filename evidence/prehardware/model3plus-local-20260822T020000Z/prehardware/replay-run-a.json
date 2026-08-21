@@ -1,0 +1,10 @@
+{
+  "domain": "native_reference",
+  "epochs": 100,
+  "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2",
+  "full_record_sequence_equal": true,
+  "run_a_accepted": true,
+  "run_a_reason": "accepted",
+  "run_b_accepted": true,
+  "run_b_reason": "accepted"
+}
