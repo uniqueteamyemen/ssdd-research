@@ -14,6 +14,7 @@ The campaign tests whether the existing governance-driven state and execution co
 | Baseline versus SSDD | Requires an admitted KVM host and a defined matched baseline path. | Blocked until the host smoke and timing ROI records pass. |
 | Adversarial falsification matrix | Integrity cases reuse existing local/reference mechanisms; time-based cases require KVM plus Timing CPU. | Mixed: integrity may run locally; timing remains blocked. |
 | Governance ablation and overhead decomposition | Requires a pre-existing, independently selectable control path for every reported mechanism. | `NOT SEPARABLE` unless the current implementation reliably exposes that boundary. |
+| Scaling characterization | Requires the admitted KVM/Timing-CPU path and a predeclared, countable workload-unit control. | 30 planned cells: baseline × SSDD × 8/16/32/64/128 × 3 independent repeats; no silent reduction or extrapolation. |
 | Long-run reproducibility | Requires an approved durable execution environment and a separate automated-run plan. | Deferred until the quantitative environment is admitted and the execution approach is approved. |
 
 ## Mandatory Measurement Gate
@@ -25,6 +26,8 @@ The current runner writes a blocked preflight record rather than substituting At
 ## Current Adapter Boundaries
 
 The existing SimCXL adapter supports the four declared memory modes and the controlled proof-corruption condition. It does **not** currently expose a declared contention/interference control. The existing workload also does not define instrumentation contracts for `T_admit`, `T_order`, `T_snapshot`, `T_commit`, or `T_total`. The verification output therefore records those fields as `NOT_SUPPORTED_BY_CURRENT_SIMCXL_ADAPTER` or `NOT_INSTRUMENTED_BY_CURRENT_WORKLOAD`; it does not manufacture values.
+
+The scaling experiment is separate from the memory-mode matrix. Before the repeated ladder begins, the admitted host must retain a `scaling-manifest.md` that defines the exact controllable unit (actors, concurrent requests, or a countable workload-equivalent), input path, ROI, counter names, and baseline/SSDD parity. Each completed cell retains latency samples or a predeclared equivalent trace, p95/p99, jitter, throughput, named CPU and memory counters where available, state/integrity outcome, raw statistics, serial log, and hashes. A missing queue/backpressure trace is `NOT_SUPPORTED_BY_CURRENT_SIMCXL_ADAPTER`; a missing CPU or memory counter is `NOT_INSTRUMENTED`; neither may be estimated. The campaign records `Blocked: timebox exhausted` for a cell that cannot be completed within the allocated window rather than extending the 85-hour ceiling or silently reducing the three-repeat rule.
 
 The `CXL-FPGA-model` configuration is a simulator mode only. It does not represent FPGA implementation, timing closure, board execution, or physical CXL validation.
 

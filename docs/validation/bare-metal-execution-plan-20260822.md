@@ -31,10 +31,19 @@ The published provider pricing is not a quote. Before any resource creation, the
 | H6–H8 | 2 | Admission record and decision | Stop/teardown on any smoke defect |
 | H8–H25 | 17 | Matched baseline versus SSDD distributions | Cell-level manifests and raw stats |
 | H25–H45 | 20 | 12-family adversarial falsification matrix | Explicit accepted/rejected/failed labels |
-| H45–H60 | 15 | Full KVM-backed SimCXL matrix | Simulation-only scope retained |
+| H45–H53 | 8 | **Experiment 7 — Scaling Characterization:** matched baseline/SSDD at 8, 16, 32, 64, and 128 logical workload units (or a documented equivalent ladder), three independent repeats per cell | KVM-to-Timing ROI, raw samples, exact unit definition, and per-cell manifests mandatory |
+| H53–H60 | 7 | Full KVM-backed SimCXL matrix | Simulation-only scope retained |
 | H60–H70 | 10 | Governance ablation where implementation permits | No invented fallback case |
 | H70–H80 | 10 | Artifact packaging and SHA-256 verification | Complete manifests required |
 | H80–H85 | 5 | Independent rerun, Git review/push, teardown | No extension after H85 |
+
+## Scaling Characterization Contract
+
+Scaling is a distinct, time-boxed quantitative experiment—not a “low versus high offered load” note. It contains 30 planned cells: `baseline × SSDD × {8,16,32,64,128} × 3 independent repeats`. A level represents actors or concurrent requests only if the actual workload exposes that control; otherwise the campaign records a countable, workload-equivalent `unit_definition` before its pilot may enter the repeated set.
+
+Every admissible cell retains raw latency samples or a predeclared equivalent trace, p95/p99, jitter, throughput, the named CPU and memory counters, state/integrity outcome, configuration hash, KVM-to-Timing ROI evidence, and manifest. Queue/backpressure is retained only when a named counter or trace exposes it; the current SimCXL adapter does not by itself establish that instrumentation, so an absent signal is `NOT_SUPPORTED_BY_CURRENT_SIMCXL_ADAPTER`, not an estimated value. Likewise, unavailable CPU or memory counters are `NOT_INSTRUMENTED`.
+
+The H45 pilot fixes the exact input path, unit definition, ROI boundaries, and counter names. If its timing shows that the full ladder cannot finish in H45–H53, the campaign does not extend beyond H85 or silently reduce repetitions: unexecuted cells are recorded as `Blocked: timebox exhausted`. Scaling output remains segregated from the CXL memory-mode matrix so that load effects are not conflated with memory-mode effects.
 
 ## Reproducibility Pins
 
