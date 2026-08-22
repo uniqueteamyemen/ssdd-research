@@ -1,0 +1,69 @@
+captured_at_utc=2026-08-22T08:56:30+00:00
+hostname=enjoyed-scorpion
+ip_addresses=84.32.32.40 10.187.89.34
+kernel=Linux 6.17.0-23-generic x86_64 GNU/Linux
+os_release=Ubuntu 24.04.4 LTS 24.04
+
+== tmux session ==
+state=not-running
+
+== process snapshot ==
+75793 bash -c      set +e     cd /opt/ssdd-research || exit 127     SSDD_RESULTS_DIR=/opt/ssdd-research/.local-results \     SSDD_MODEL3_RUN_LABEL=cherry-model3plus1 \     bash /opt/ssdd-research/scripts/run_model3plus_local_campaign.sh \       > /opt/ssdd-results/cherry-model3plus1/launcher.log 2>&1     rc=$?     {       printf 'ssdd_commit='; git -C /opt/ssdd-research rev-parse HEAD       printf 'runner_sha256='; sha256sum /opt/ssdd-research/scripts/run_model3plus_local_campaign.sh | awk '{print $1}'       printf 'reference_sha256='; sha256sum /opt/ssdd-research/reference/python/prehardware_reference.py | awk '{print $1}'       printf 'scope=native-reference-behavioral-and-integrity-only\n'       printf 'inner_results=%s\n' '/opt/ssdd-research/.local-results/cherry-model3plus1'     } > /opt/ssdd-results/cherry-model3plus1/run-manifest.txt     printf '%s\n' "$rc" > /opt/ssdd-results/cherry-model3plus1/exit-status     find '/opt/ssdd-research/.local-results/cherry-model3plus1' -type f -print0 | sort -z | xargs -0 sha256sum > /opt/ssdd-results/cherry-model3plus1/SHA256SUMS     sha256sum -c /opt/ssdd-results/cherry-model3plus1/SHA256SUMS > /opt/ssdd-results/cherry-model3plus1/remote-sha256sum-check.txt     exit "$rc"   
+
+== source provenance ==
+ssdd_repository=/opt/ssdd-research
+ssdd_commit=b26525e116de025b823d86c3a5976e6d0e118015
+ssdd_status=runner=/opt/ssdd-research/scripts/run_model3plus_local_campaign.sh
+runner_sha256=57a6f5b2727326fda0f037e7c8c62c4d4b2ff5047aa341d6164a85b9270fc1e4
+python_reference=/opt/ssdd-research/reference/python/prehardware_reference.py
+python_reference_sha256=ba1235fc1e8bb6c358dccf480201a2c22e7307d50b1f36374db008adf812ad19
+rustc=rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+gpp=g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+== results paths ==
+outer=/opt/ssdd-results/cherry-model3plus2
+inner=/opt/ssdd-research/.local-results/cherry-model3plus2
+
+== exact invoked command from remote launcher ==
+SSDD_RESULTS_DIR=/opt/ssdd-research/.local-results/cherry-model3plus2 \
+SSDD_MODEL3_RUN_LABEL=cherry-model3plus2 \
+bash /opt/ssdd-research/scripts/run_model3plus_local_campaign.sh
+
+== current outer files ==
+exit-status 2 bytes
+launcher.log 2853 bytes
+remote-sha256sum-check.txt 2349 bytes
+run-manifest.txt 334 bytes
+SHA256SUMS 4085 bytes
+
+== current inner files ==
+prehardware/cross-language.json 346 bytes
+prehardware/fault-recovery.json 1409 bytes
+prehardware/faults.json 1465 bytes
+prehardware/ledger-tamper.json 498 bytes
+prehardware/manifest.json 6839 bytes
+prehardware/ordering-chain-stress.json 767 bytes
+prehardware/ordering.json 407 bytes
+prehardware/prehardware_ledger_reference 13260008 bytes
+prehardware/python-ledger.json 6984 bytes
+prehardware/q32-differential.json 338 bytes
+prehardware/q32.json 349 bytes
+prehardware/replay-audit-trail.bin 8000 bytes
+prehardware/replay-independent-a.json 6984 bytes
+prehardware/replay-independent-b.json 6984 bytes
+prehardware/replay-independent.json 336 bytes
+prehardware/replay-run-a.json 286 bytes
+prehardware/replay-run-b.json 286 bytes
+prehardware/run.log 405 bytes
+prehardware/rust-ledger.json 6859 bytes
+proof-accepted.txt 208 bytes
+proof-corruption.txt 221 bytes
+proof-integrity-workload 16312 bytes
+run.log 2748 bytes
+run-manifest.txt 562 bytes
+SHA256SUMS 3818 bytes
+SHA256SUMS.sha256 130 bytes
+source-register.sha256 1151 bytes
+verification.json 1931 bytes
+
+== tmux pane capture ==

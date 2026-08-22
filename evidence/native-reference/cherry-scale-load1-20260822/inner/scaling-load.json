@@ -1,0 +1,194 @@
+{
+  "domain": "native_reference_wallclock",
+  "limitation": "Wall-clock values and modeled byte counts are reference-model measurements, not NIC bandwidth, distributed convergence, or hardware timing.",
+  "packet_serialization_bytes": 28,
+  "points": [
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 25,
+      "events": 800,
+      "events_per_second": 793259.67,
+      "kind": "scaling",
+      "logical_nodes": 8,
+      "modeled_bytes_per_epoch": 896,
+      "packets_per_epoch": 32,
+      "timing_mean_us": {
+        "t_agg_us": 2.205,
+        "t_fuse_us": 0.805,
+        "t_ssc_us": 9.143,
+        "t_total_us": 12.152
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 25,
+      "events": 1600,
+      "events_per_second": 707262.35,
+      "kind": "scaling",
+      "logical_nodes": 16,
+      "modeled_bytes_per_epoch": 1792,
+      "packets_per_epoch": 64,
+      "timing_mean_us": {
+        "t_agg_us": 4.108,
+        "t_fuse_us": 0.663,
+        "t_ssc_us": 33.069,
+        "t_total_us": 37.839
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 25,
+      "events": 3200,
+      "events_per_second": 816127.08,
+      "kind": "scaling",
+      "logical_nodes": 32,
+      "modeled_bytes_per_epoch": 3584,
+      "packets_per_epoch": 128,
+      "timing_mean_us": {
+        "t_agg_us": 8.313,
+        "t_fuse_us": 0.927,
+        "t_ssc_us": 38.338,
+        "t_total_us": 47.578
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 25,
+      "events": 6400,
+      "events_per_second": 879113.03,
+      "kind": "scaling",
+      "logical_nodes": 64,
+      "modeled_bytes_per_epoch": 7168,
+      "packets_per_epoch": 256,
+      "timing_mean_us": {
+        "t_agg_us": 14.76,
+        "t_fuse_us": 0.678,
+        "t_ssc_us": 70.143,
+        "t_total_us": 85.581
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 25,
+      "events": 12800,
+      "events_per_second": 872231.98,
+      "kind": "scaling",
+      "logical_nodes": 128,
+      "modeled_bytes_per_epoch": 14336,
+      "packets_per_epoch": 512,
+      "timing_mean_us": {
+        "t_agg_us": 29.55,
+        "t_fuse_us": 0.739,
+        "t_ssc_us": 147.336,
+        "t_total_us": 177.625
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 50,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 28,
+      "observed_reference_events_per_second": 296198.0,
+      "packets_per_epoch": 1,
+      "target_input_events_per_second": 1000,
+      "timing_mean_us": {
+        "t_agg_us": 0.16,
+        "t_fuse_us": 0.593,
+        "t_ssc_us": 0.52,
+        "t_total_us": 1.274
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 250,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 140,
+      "observed_reference_events_per_second": 666378.79,
+      "packets_per_epoch": 5,
+      "target_input_events_per_second": 5000,
+      "timing_mean_us": {
+        "t_agg_us": 0.423,
+        "t_fuse_us": 0.527,
+        "t_ssc_us": 1.431,
+        "t_total_us": 2.381
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 500,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 280,
+      "observed_reference_events_per_second": 778474.25,
+      "packets_per_epoch": 10,
+      "target_input_events_per_second": 10000,
+      "timing_mean_us": {
+        "t_agg_us": 0.719,
+        "t_fuse_us": 0.527,
+        "t_ssc_us": 2.559,
+        "t_total_us": 3.805
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 1250,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 700,
+      "observed_reference_events_per_second": 875029.05,
+      "packets_per_epoch": 25,
+      "target_input_events_per_second": 25000,
+      "timing_mean_us": {
+        "t_agg_us": 1.609,
+        "t_fuse_us": 0.536,
+        "t_ssc_us": 6.262,
+        "t_total_us": 8.407
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 2500,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 1400,
+      "observed_reference_events_per_second": 903012.49,
+      "packets_per_epoch": 50,
+      "target_input_events_per_second": 50000,
+      "timing_mean_us": {
+        "t_agg_us": 3.037,
+        "t_fuse_us": 0.543,
+        "t_ssc_us": 12.604,
+        "t_total_us": 16.184
+      }
+    },
+    {
+      "domain": "native_reference_wallclock",
+      "epoch_success_rate": 1.0,
+      "epochs": 50,
+      "events": 5000,
+      "kind": "load",
+      "modeled_bytes_per_epoch": 2800,
+      "observed_reference_events_per_second": 900909.5,
+      "packets_per_epoch": 100,
+      "target_input_events_per_second": 100000,
+      "timing_mean_us": {
+        "t_agg_us": 5.921,
+        "t_fuse_us": 0.559,
+        "t_ssc_us": 26.605,
+        "t_total_us": 33.085
+      }
+    }
+  ]
+}

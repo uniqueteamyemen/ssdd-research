@@ -1,0 +1,14 @@
+{
+  "all_permutations_equal": true,
+  "domain": "native_reference",
+  "exact_four_key_duplicate_error": "exact_four_key_collision:(4, 2, 99, 9)",
+  "exact_four_key_duplicate_rejected": true,
+  "ordered_batch_hash": "8fd17060a85f190a0d977fda225da4528636215e4b25d7038c63d584ec072930",
+  "packets_per_permutation": 48,
+  "permutations": 128,
+  "prefix_collision_sorted_source_ids": [
+    3,
+    7,
+    9
+  ]
+}

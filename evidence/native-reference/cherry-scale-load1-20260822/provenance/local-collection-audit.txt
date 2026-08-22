@@ -1,0 +1,3 @@
+remote_SHA256SUMS_status=passed (see remote-integrity-and-exit.txt)
+local_SHA256SUMS_inventory=generated (see local-SHA256SUMS)
+local_destination=/home/ubuntu/ssdd-research/.local-results/cherry-scale-load1-20260822T090729Z

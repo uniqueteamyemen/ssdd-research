@@ -1,0 +1,70 @@
+{
+  "campaign": "SSDD Model 3+ local evidence packages A-E",
+  "execution_domains": [
+    "native_reference",
+    "native_reference_independent_processes",
+    "native_python_reference",
+    "native_rust_reference",
+    "native_compiled_reference_workload"
+  ],
+  "limitations": [
+    "No latency, jitter, throughput, overhead, or timing result was collected or interpreted.",
+    "No gem5/KVM, Timing CPU, FPGA, physical CXL Type-3, silicon, network, security, or production claim is made.",
+    "The Rust comparator is a narrow retained reference implementation, not an external supplied runtime.",
+    "The native compiled proof workload validates its declared reference logic only and is not a CXL or gem5 execution result."
+  ],
+  "packages": {
+    "A_adversarial_functional": {
+      "evidence": [
+        "ordering.json",
+        "ordering-chain-stress.json",
+        "faults.json",
+        "fault-recovery.json",
+        "replay-independent.json"
+      ],
+      "invariants": [
+        "O-1",
+        "O-2",
+        "S-1",
+        "R-1"
+      ],
+      "status": "accepted"
+    },
+    "B_ledger_and_proof_integrity": {
+      "evidence": [
+        "ledger-tamper.json",
+        "proof-accepted.txt",
+        "proof-corruption.txt"
+      ],
+      "invariants": [
+        "L-1",
+        "S-1"
+      ],
+      "status": "accepted"
+    },
+    "C_cross_implementation_replay": {
+      "evidence": [
+        "python-ledger.json",
+        "rust-ledger.json",
+        "cross-language.json"
+      ],
+      "invariant": "R-1",
+      "status": "accepted"
+    },
+    "D_cross_domain_sanity": {
+      "evidence": [
+        "docs/validation/model3plus-local-campaign-plan.md"
+      ],
+      "status": "documented"
+    },
+    "E_artifact_register": {
+      "evidence": [
+        "run-manifest.txt",
+        "source-register.sha256",
+        "SHA256SUMS"
+      ],
+      "status": "pending_hash_generation"
+    }
+  },
+  "status": "accepted"
+}

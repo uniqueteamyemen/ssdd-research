@@ -1,0 +1,15 @@
+campaign=SSDD Model 3+ local evidence packages A-E
+campaign_scope=behavioral_and_integrity_reference_only
+started_utc=2026-08-22T08:53:53Z
+repository_commit=b26525e116de025b823d86c3a5976e6d0e118015
+repository_status=
+python=Python 3.12.3
+rustc=rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+gxx=g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+host_kernel=Linux 6.17.0-23-generic x86_64 GNU/Linux
+kvm_available=true
+performance_measurement=false
+hardware_claim=false
+external_access=false
+proof_corruption_exit=2
+completed_utc=2026-08-22T08:53:55Z

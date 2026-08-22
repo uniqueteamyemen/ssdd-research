@@ -1,0 +1,122 @@
+captured_at_utc=2026-08-22T08:59:18+00:00
+hostname=enjoyed-scorpion
+ip_addresses=84.32.32.40 10.187.89.34
+kernel=Linux 6.17.0-23-generic x86_64 GNU/Linux
+ssdd_repository=/opt/ssdd-research
+ssdd_commit=b26525e116de025b823d86c3a5976e6d0e118015
+ssdd_status=runner_path=/opt/ssdd-research/scripts/run_model3plus_local_campaign.sh
+runner_sha256=57a6f5b2727326fda0f037e7c8c62c4d4b2ff5047aa341d6164a85b9270fc1e4
+python_reference_path=/opt/ssdd-research/reference/python/prehardware_reference.py
+python_reference_sha256=ba1235fc1e8bb6c358dccf480201a2c22e7307d50b1f36374db008adf812ad19
+cpp_workload_path=/opt/ssdd-research/simulation/gem5/ssdd_reference_workload.cpp
+cpp_workload_sha256=2ec429c1bf77fbadb5b1fabcba8c1aec06b10931b73d32df597b572de128f372
+rust_reference_path=/opt/ssdd-research/reference/rust/prehardware_ledger_reference.rs
+rust_reference_sha256=68cc173ac254008a82658e0a4cac97ca30ecc4b6cf2daf1b91420530dde0fb53
+python3=Python 3.12.3
+rustc=rustc 1.75.0 (82e1608df 2023-12-21) (built from a source tarball)
+gpp=g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+outer_results=/opt/ssdd-results/cherry-model3plus2
+inner_results=/opt/ssdd-research/.local-results/cherry-model3plus2
+
+== exact invocation ==
+SSDD_RESULTS_DIR=/opt/ssdd-research/.local-results/cherry-model3plus2 \
+SSDD_MODEL3_RUN_LABEL=cherry-model3plus2 \
+bash /opt/ssdd-research/scripts/run_model3plus_local_campaign.sh
+
+== exit status ==
+0
+
+== remote outer SHA256 verification ==
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/cross-language.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/fault-recovery.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/faults.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ledger-tamper.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/manifest.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ordering-chain-stress.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ordering.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/prehardware_ledger_reference: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/python-ledger.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/q32-differential.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/q32.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-audit-trail.bin: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent-a.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent-b.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-run-a.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-run-b.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/run.log: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/rust-ledger.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-accepted.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-corruption.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-integrity-workload: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/run.log: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/run-manifest.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/SHA256SUMS: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/SHA256SUMS.sha256: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/source-register.sha256: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/verification.json: OK
+
+== remote inner SHA256 verification ==
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/cross-language.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/fault-recovery.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/faults.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ledger-tamper.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/manifest.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ordering-chain-stress.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/ordering.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/prehardware_ledger_reference: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/python-ledger.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/q32-differential.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/q32.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-audit-trail.bin: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent-a.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent-b.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-independent.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-run-a.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/replay-run-b.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/run.log: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/prehardware/rust-ledger.json: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-accepted.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-corruption.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/proof-integrity-workload: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/run.log: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/run-manifest.txt: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/source-register.sha256: OK
+/opt/ssdd-research/.local-results/cherry-model3plus2/verification.json: OK
+
+== outer artifact inventory ==
+exit-status 2 bytes
+launcher.log 2853 bytes
+remote-sha256sum-check.txt 2349 bytes
+run-manifest.txt 334 bytes
+SHA256SUMS 4085 bytes
+
+== inner artifact inventory ==
+prehardware/cross-language.json 346 bytes
+prehardware/fault-recovery.json 1409 bytes
+prehardware/faults.json 1465 bytes
+prehardware/ledger-tamper.json 498 bytes
+prehardware/manifest.json 6839 bytes
+prehardware/ordering-chain-stress.json 767 bytes
+prehardware/ordering.json 407 bytes
+prehardware/prehardware_ledger_reference 13260008 bytes
+prehardware/python-ledger.json 6984 bytes
+prehardware/q32-differential.json 338 bytes
+prehardware/q32.json 349 bytes
+prehardware/replay-audit-trail.bin 8000 bytes
+prehardware/replay-independent-a.json 6984 bytes
+prehardware/replay-independent-b.json 6984 bytes
+prehardware/replay-independent.json 336 bytes
+prehardware/replay-run-a.json 286 bytes
+prehardware/replay-run-b.json 286 bytes
+prehardware/run.log 405 bytes
+prehardware/rust-ledger.json 6859 bytes
+proof-accepted.txt 208 bytes
+proof-corruption.txt 221 bytes
+proof-integrity-workload 16312 bytes
+run.log 2748 bytes
+run-manifest.txt 562 bytes
+SHA256SUMS 3818 bytes
+SHA256SUMS.sha256 130 bytes
+source-register.sha256 1151 bytes
+verification.json 1931 bytes

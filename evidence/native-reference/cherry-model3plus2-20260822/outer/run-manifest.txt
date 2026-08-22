@@ -1,0 +1,5 @@
+ssdd_commit=b26525e116de025b823d86c3a5976e6d0e118015
+runner_sha256=57a6f5b2727326fda0f037e7c8c62c4d4b2ff5047aa341d6164a85b9270fc1e4
+reference_sha256=ba1235fc1e8bb6c358dccf480201a2c22e7307d50b1f36374db008adf812ad19
+scope=native-reference-behavioral-and-integrity-only
+inner_results=/opt/ssdd-research/.local-results/cherry-model3plus2

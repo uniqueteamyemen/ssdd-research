@@ -1,0 +1,18 @@
+run_label=cherry-scale-load1
+ssh_target=84.32.32.40
+hostname=enjoyed-scorpion
+hostname_fqdn=enjoyed-scorpion
+kernel=Linux 6.17.0-23-generic x86_64 GNU/Linux
+os_release=Ubuntu 24.04.4 LTS (Noble Numbat)
+execution_started_utc=2026-08-22T09:06:19Z
+execution_command=SSDD_RESULTS_DIR=/opt/ssdd-research/.local-results/cherry-scale-load1 python3 /opt/ssdd-research/reference/python/prehardware_reference.py --mode scale-load
+repository_path=/opt/ssdd-research
+reference_source_path=/opt/ssdd-research/reference/python/prehardware_reference.py
+results_inner_path=/opt/ssdd-research/.local-results/cherry-scale-load1
+results_outer_path=/opt/ssdd-results/cherry-scale-load1
+ssdd_commit=b26525e116de025b823d86c3a5976e6d0e118015
+reference_source_sha256=ba1235fc1e8bb6c358dccf480201a2c22e7307d50b1f36374db008adf812ad19
+python_path=/usr/bin/python3.12
+python_binary_sha256=1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118
+python_version=Python 3.12.3
+scope=native-reference-wallclock-only; not KVM, gem5, CXL Type-3, FPGA, silicon, NIC, production, or baseline-versus-SSDD performance

@@ -1,0 +1,42 @@
+{
+  "all_full_hash_chains_equal": true,
+  "arrival_permutations": 256,
+  "chain_epochs": 100,
+  "distinct_payload_exact_key_collision_error": "exact_four_key_collision:(3, 4, 5, 6)",
+  "distinct_payload_exact_key_collision_rejected": true,
+  "domain": "native_reference",
+  "final_hash": "34b7958a64082c326ba3a7cab44468ae9564c7ec2072f88533e10426e23f65c2",
+  "four_component_order_keys": [
+    [
+      0,
+      9,
+      9,
+      9
+    ],
+    [
+      0,
+      9,
+      9,
+      10
+    ],
+    [
+      0,
+      9,
+      10,
+      9
+    ],
+    [
+      0,
+      10,
+      9,
+      9
+    ],
+    [
+      1,
+      9,
+      9,
+      9
+    ]
+  ],
+  "limitation": "This is a single-process deterministic reference stress test, not a distributed runtime or network experiment."
+}

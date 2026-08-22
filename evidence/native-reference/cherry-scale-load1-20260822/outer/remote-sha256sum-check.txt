@@ -1,0 +1,5 @@
+/opt/ssdd-research/.local-results/cherry-scale-load1/scaling-load.json: OK
+/opt/ssdd-results/cherry-scale-load1/exit-status: OK
+/opt/ssdd-results/cherry-scale-load1/run-manifest.txt: OK
+/opt/ssdd-results/cherry-scale-load1/stderr.log: OK
+/opt/ssdd-results/cherry-scale-load1/stdout.log: OK

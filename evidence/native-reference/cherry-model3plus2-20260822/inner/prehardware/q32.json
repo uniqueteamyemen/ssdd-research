@@ -1,0 +1,15 @@
+{
+  "all_passed": true,
+  "cases": {
+    "boundary_negative": true,
+    "boundary_positive": true,
+    "max_plus_one": true,
+    "min_minus_one": true,
+    "multiplication_overflow": true,
+    "negative_overflow": true,
+    "negative_rounding_toward_zero": true,
+    "positive_overflow": true,
+    "zero": true
+  },
+  "domain": "native_reference"
+}
