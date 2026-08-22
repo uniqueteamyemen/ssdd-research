@@ -13,6 +13,7 @@ OUTROOT="${SSDD_RESULTS_DIR:-${ROOT}/.local-results}/simcxl-type3"
 CASE_SET="${SSDD_SIMCXL_CASE_SET:-limited}"
 ALLOW_ATOMIC_BOOT="${SSDD_ALLOW_ATOMIC_BOOT:-0}"
 IN_PLACE_DISK="${SSDD_SIMCXL_IN_PLACE_DISK:-0}"
+ALLOW_IN_PLACE_FULL="${SSDD_SIMCXL_ALLOW_IN_PLACE_FULL:-0}"
 
 for path in "$SIMCXL_ROOT" "$SIMCXL_KERNEL" "$SIMCXL_DISK" "$SIMCXL_BIN" "$CONFIG" "$SOURCE" "$GUEST_SERVICE"; do
   [[ -e "$path" ]] || { echo "setup-blocked: missing required path: $path" >&2; exit 20; }
@@ -59,10 +60,12 @@ case "$CASE_SET" in
     ;;
 esac
 
-if [[ "$IN_PLACE_DISK" == "1" && "$CASE_SET" != "limited" ]]; then
-  echo "setup-blocked: in-place disk staging is restricted to SSDD_SIMCXL_CASE_SET=limited" >&2
+if [[ "$IN_PLACE_DISK" == "1" && "$CASE_SET" != "limited" && "$ALLOW_IN_PLACE_FULL" != "1" ]]; then
+  echo "setup-blocked: full in-place disk staging requires SSDD_SIMCXL_ALLOW_IN_PLACE_FULL=1 and is behavioral evidence only" >&2
   exit 20
 fi
+
+source_disk_sha_before="$(sha256sum "$SIMCXL_DISK" | awk '{print $1}')"
 
 printf 'case,memory_mode,fault,fault_record,guest_exit,validation,replay_digest,reference_digest,sim_exit\n' > "$OUTROOT/matrix.csv"
 for index in "${!case_names[@]}"; do
@@ -74,7 +77,7 @@ for index in "${!case_names[@]}"; do
   mkdir -p "$run_dir"
   if [[ "$IN_PLACE_DISK" == "1" ]]; then
     disk_copy="$SIMCXL_DISK"
-    echo "warning: staging limited-case guest binary in-place; source-disk SHA-256 is retained in the run record" >&2
+    echo "warning: staging guest binary in-place; this run is behavioral evidence only and source-disk SHA-256 is retained before and after" >&2
   else
     disk_copy="$run_dir/guest.img"
     cp --sparse=always --reflink=auto "$SIMCXL_DISK" "$disk_copy"
@@ -116,7 +119,7 @@ for index in "${!case_names[@]}"; do
   # Normalize only that transport prefix before selecting workload markers so the
   # retained summary and matrix reflect the actual guest result rather than blanks.
   sed -E 's/^[^:]+: //' "$serial" | tr -d '\r' | \
-    grep -E '^(SSDD_REFERENCE_WORKLOAD|stages|replay_digest|reference_digest|memory_probe|fault_mode|fault_record|validation|SSDD_GUEST_EXIT=|SSDD_CXL_NUMA_)' \
+    grep -E '^(SSDD_REFERENCE_WORKLOAD|stages|replay_digest|reference_digest|memory_probe|fault_mode|fault_record|validation|SSDD_GUEST_EXIT=|SSDD_CXL_NUMA_|SSDD_TIMING_CPU_ROI_)' \
     > "$run_dir/summary" || true
   guest_exit="$(awk -F= '/^SSDD_GUEST_EXIT=/{value=$2} END{print value+0}' "$run_dir/summary")"
   validation="$(awk -F= '/^validation=/{value=$2} END{print value}' "$run_dir/summary")"
@@ -135,9 +138,17 @@ done
   printf 'source_sha256='; sha256sum "$SOURCE" | awk '{print $1}'
   printf 'config_sha256='; sha256sum "$CONFIG" | awk '{print $1}'
   printf 'guest_binary_sha256='; sha256sum "$HOST_BIN" | awk '{print $1}'
+  printf 'disk_sha256_before='; printf '%s\n' "$source_disk_sha_before"
+  printf 'disk_sha256_after='; sha256sum "$SIMCXL_DISK" | awk '{print $1}'
   printf 'boot_cpu=%s\n' "$BOOT_CPU"
   printf 'case_set=%s\n' "$CASE_SET"
-  printf 'disk_staging=%s\n' "$([[ "$IN_PLACE_DISK" == "1" ]] && echo in-place-limited || echo copied)"
+  if [[ "$IN_PLACE_DISK" == "1" && "$CASE_SET" == "limited" ]]; then
+    printf 'disk_staging=in-place-limited\n'
+  elif [[ "$IN_PLACE_DISK" == "1" ]]; then
+    printf 'disk_staging=in-place-full-behavioral-only\n'
+  else
+    printf 'disk_staging=copied\n'
+  fi
 } > "$OUTROOT/run-manifest.txt"
 find "$OUTROOT" -type f \( -name 'summary' -o -name 'matrix.csv' -o -name 'run-manifest.txt' \) -print0 | sort -z | xargs -0 sha256sum > "$OUTROOT/SHA256SUMS"
 echo "SimCXL Type-3 matrix completed. Local output: $OUTROOT"

@@ -13,6 +13,9 @@ target/
 build/
 m5out/
 .local-results/
+.local-results-cxl/
+.local-results-cxl-service-rerun/
+*.partial.img
 results/**/config.ini
 results/**/config.json
 results/**/stats.txt

@@ -86,10 +86,11 @@ workload_args = f"--fault={args.fault} --fault-record={args.fault_record}"
 command = (
     "m5 exit; "
     "echo SSDD_CXL_NUMA_BEGIN; numactl -H; echo SSDD_CXL_NUMA_END; "
+    "echo SSDD_TIMING_CPU_ROI_BEGIN; "
     "m5 resetstats; "
     f"numactl {memory_policy} {args.guest_binary} {workload_args}; "
     "status=$?; echo SSDD_GUEST_EXIT=$status; "
-    "m5 dumpstats; m5 exit"
+    "m5 dumpstats; echo SSDD_TIMING_CPU_ROI_END; m5 exit"
 )
 
 board.set_kernel_disk_workload(
@@ -109,4 +110,5 @@ print(f"memory_mode={args.memory_mode}")
 print(f"fault={args.fault}")
 print(f"fault_record={args.fault_record if args.fault == 'proof-corruption' else 0}")
 print(f"boot_cpu={args.boot_cpu}")
+print("roi_cpu=timing-after-first-exit-event")
 simulator.run()
