@@ -58,7 +58,22 @@ These counters are retained only as proof that the Timing CPU executed after the
 
 The launcher wrapper's `/opt/ssdd-results/cherry-kvm-matrix1/exit-status` file contains the literal text `\0`, not a numeric process status. The cause is an escaping defect in the wrapper's status-write expression. It is therefore **not** used as independent proof of a shell exit code, and it has not been edited after the run. Completion is supported instead by the intact five-row matrix, all per-cell `sim_exit=0` values, the terminal completion line in the launcher log, the fully written manifest/checksum inventory, and the absence of the matrix tmux session at collection.
 
-The matrix is **accepted as controlled full-system SimCXL behavioral evidence with retained KVM-to-Timing execution proof**. It is not accepted as a quantitative performance campaign. A future baseline, scaling, adversarial timing, or overhead result must declare the comparison/control, repetitions, ROI accounting, and claimed metrics in advance and retain the raw artifacts required by the controlled validation contract.[^campaign]
+## Independent repeat
+
+An independently named repeat was completed at remote root `/opt/ssdd-results/cherry-kvm-matrix2/simcxl-type3/` using the same clean, pinned Cherry worktrees and the same resource/binary fingerprints. Its light local retention copy is `/home/ubuntu/ssdd-research/.local-results/cherry-kvm-matrix2-20260822T075517Z/`, again excluding generated guest images.
+
+The corrected launcher wrote numeric `exit-status=0`. Remote and local `sha256sum -c SHA256SUMS` checks passed for all five summaries, `matrix.csv`, and `run-manifest.txt`. A byte-for-byte comparison of the two `matrix.csv` files passed. The repeat also retained `boot_cpu=kvm`, `switching cpus`, both Timing-ROI markers, and a nonzero Timing CPU `numCycles` counter in every cell.
+
+| Repeatability check | Audited result |
+|---|---|
+| Runner exit capture for repeat | `0` |
+| Full five-row semantic matrix | Identical to first run |
+| Accepted rows | Four accepted, each guest exit `0` and gem5 exit `0` |
+| Proof-corruption row | Rejected as designed, guest exit `2`, gem5 exit `0` |
+| KVM-to-Timing / ROI checks | Passed for all five cells |
+| Checksum verification | Passed remotely and after local collection |
+
+The matrix is **accepted as two independently retained, controlled full-system SimCXL behavioral executions with KVM-to-Timing proof**. It is not accepted as a quantitative performance campaign. A future baseline, scaling, adversarial timing, or overhead result must declare the comparison/control, repetitions, ROI accounting, and claimed metrics in advance and retain the raw artifacts required by the controlled validation contract.[^campaign]
 
 [^runner]: [`scripts/run_simcxl_type3_matrix.sh`](../../scripts/run_simcxl_type3_matrix.sh)
 [^config]: [`simulation/cxl/simcxl_type3_ssdd.py`](../../simulation/cxl/simcxl_type3_ssdd.py)
