@@ -1,0 +1,45 @@
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+system.remote_gdb: Listening for connections on port 7000
+Redirecting stdout and stderr to /opt/ssdd-results/cherry-controlled-matrix1/gem5-controlled-matrix/fault-proof-corruption-record-18/run-2/simout
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 23.1.0.0
+gem5 compiled Aug 22 2026 06:50:20
+gem5 started Aug 22 2026 08:33:25
+gem5 executing on enjoyed-scorpion, pid 74129
+command line: /opt/simcxl-ssdd/build/X86/gem5.opt -d /opt/ssdd-results/cherry-controlled-matrix1/gem5-controlled-matrix/fault-proof-corruption-record-18/run-2 --redirect-stdout --stdout-file=simout /opt/ssdd-research/simulation/gem5/controlled_se.py --cmd=/opt/ssdd-results/cherry-controlled-matrix1/gem5-controlled-matrix/ssdd_reference_workload '--options=--fault=proof-corruption --fault-record=18' --cpu-type=TimingSimpleCPU --mem-type=SimpleMemory --ssdd-memory-latency=50ns --mem-size=256MB --caches --l1d_size=32kB --l1i_size=32kB
+
+**** REAL SIMULATION ****
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/sim/syscall_emul.cc:74: warn: ignoring syscall set_robust_list(...)
+src/sim/syscall_emul.cc:74: warn: ignoring syscall rseq(...)
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/syscall_emul.cc:74: warn: ignoring syscall mprotect(...)
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+SSDD_REFERENCE_WORKLOAD v0.1
+stages=5 engines=7 operations=35
+replay_digest=c169add06c40191c
+reference_digest=ff05ec2371488ba1
+memory_probe=6ee58deb8743b0f8
+fault_mode=proof-corruption
+fault_record=18
+validation=rejected
+Exiting @ tick 1360248540 because exiting with last active thread context
+Simulated exit code not 0! Exit code is 2
