@@ -73,7 +73,21 @@ The corrected launcher wrote numeric `exit-status=0`. Remote and local `sha256su
 | KVM-to-Timing / ROI checks | Passed for all five cells |
 | Checksum verification | Passed remotely and after local collection |
 
-The matrix is **accepted as two independently retained, controlled full-system SimCXL behavioral executions with KVM-to-Timing proof**. It is not accepted as a quantitative performance campaign. A future baseline, scaling, adversarial timing, or overhead result must declare the comparison/control, repetitions, ROI accounting, and claimed metrics in advance and retain the raw artifacts required by the controlled validation contract.[^campaign]
+### Third semantic repeat and retained anomaly
+
+A third independently named run completed at `/opt/ssdd-results/cherry-kvm-matrix3/simcxl-type3/` with `exit-status=0`. Its light local evidence copy is `/home/ubuntu/ssdd-research/.local-results/cherry-kvm-matrix3-20260822T080801Z/`. Remote and local checksum verification passed, and the five-row `matrix.csv` is byte-identical to the first two runs: the four nominal cells are accepted and the proof-corruption cell is rejected with guest exit `2` and gem5 exit `0`.
+
+The third run preserves `boot_cpu=kvm`, `switching cpus`, nonzero Timing CPU counters, and `SSDD_TIMING_CPU_ROI_BEGIN` in all five cells. However, its proof-corruption cell does **not** retain `SSDD_TIMING_CPU_ROI_END` after the guest exit line, although the staged guest command includes `m5 dumpstats; echo SSDD_TIMING_CPU_ROI_END; m5 exit` and the preceding two proof-corruption runs retained that marker. The raw evidence and the failed local ROI-closure check are retained at `cherry-kvm-matrix3-20260822T080801Z/local-repeatability-audit.txt`.
+
+Accordingly, the third run is retained as a **semantic behavioral replicate with a documented incomplete ROI-closure artifact in one rejection cell**. It is not counted as a third ROI-closed replicate, and its counters are not used for a performance claim. The two prior runs remain the complete retained KVM-to-Timing / ROI-closed evidence set.
+
+### Fourth ROI-closed repeat
+
+A fourth independently named run completed at `/opt/ssdd-results/cherry-kvm-matrix4/simcxl-type3/` with corrected numeric `exit-status=0`. Its light local retention copy is `/home/ubuntu/ssdd-research/.local-results/cherry-kvm-matrix4-20260822T082048Z/`, which excludes generated guest disks. Remote and local `sha256sum -c SHA256SUMS` checks passed. The five-row `matrix.csv` is byte-identical to the first, second, and third runs: the four nominal cells are accepted and the proof-corruption cell is rejected as designed.
+
+The retained audit at `cherry-kvm-matrix4-20260822T082048Z/local-roi-closed-repeatability-audit.txt` verifies the numeric runner exit, checksum checks, identical semantics, `boot_cpu=kvm`, `switching cpus`, `SSDD_TIMING_CPU_ROI_BEGIN`, `SSDD_TIMING_CPU_ROI_END`, and nonzero `board.processor.switch.core.numCycles` in every cell. Consequently, runs 1, 2, and 4 form the three independently retained **ROI-closed** behavioral executions. Run 3 remains separately retained as the documented semantic-only repeat with the missing close marker in one rejection cell.
+
+The matrix is **accepted as three independently retained, controlled full-system SimCXL behavioral executions with KVM-to-Timing and ROI-closure proof**, plus one semantic repeat with the stated ROI-closure limitation. It is not accepted as a quantitative performance campaign. A future baseline, scaling, adversarial timing, or overhead result must declare the comparison/control, repetitions, ROI accounting, and claimed metrics in advance and retain the raw artifacts required by the controlled validation contract.[^campaign]
 
 [^runner]: [`scripts/run_simcxl_type3_matrix.sh`](../../scripts/run_simcxl_type3_matrix.sh)
 [^config]: [`simulation/cxl/simcxl_type3_ssdd.py`](../../simulation/cxl/simcxl_type3_ssdd.py)
