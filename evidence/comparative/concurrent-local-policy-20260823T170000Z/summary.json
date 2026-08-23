@@ -1,0 +1,36 @@
+{
+  "arms": {
+    "cas_retry": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "single_writer_sequencer": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "ssdd": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    }
+  },
+  "case_count": 133,
+  "execution_domain": "local-native-threaded-policy-references",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "required_human_review": [
+    "Run blinded reviewer tasks against each arm\u2019s record bundle.",
+    "Review policy surfaces and operational tradeoffs; a baseline that canonicalizes is not a failed baseline.",
+    "Do not measure or claim performance until a separate preregistered matrix exists.",
+    "Do not promote to Cherry before the human review gate is complete."
+  ],
+  "result_count": 399,
+  "status": "concurrent_local_policy_matrix_completed_no_value_winner"
+}

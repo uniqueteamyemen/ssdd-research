@@ -1,0 +1,7 @@
+command: python3 comparison/concurrent_policy_matrix.py --output /home/ubuntu/ssdd-research/evidence/comparative/concurrent-local-policy-20260823T170000Z --run-label concurrent-local-policy-20260823T170000Z
+host: 305f57cac429
+utc: 2026-08-23T20:06:26Z
+research_commit: 899a85fcea82734117740aadd13786dcb9489729
+matrix_sha256: 485d9749f8bbee7415665d955d131525cee3e67ed2875c58d5a18a305afd1c80
+runner_sha256: eba4ea1928864020ef35eb76d8913a98b0232626bae71993db08a15b91f14c6d
+python: Python 3.12.3

@@ -1,0 +1,36 @@
+{
+  "arms": {
+    "cas_retry": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "single_writer_sequencer": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "ssdd": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    }
+  },
+  "case_count": 133,
+  "execution_domain": "local-native-policy-references",
+  "manifest_hash": "2ac1373e2e16930cbdf689a28e537bcd18f21760cea6e9a8e8fb4ba7d5ac83a1",
+  "required_human_review": [
+    "Compare a reviewer\u2019s ability to answer the same acceptance/rejection question from each arm\u2019s evidence bundle.",
+    "Review independent policy surfaces; canonicalization added to CAS/retry and sequencer is a legitimate baseline cost, not an SSDD win by default.",
+    "Implement a concurrent CAS/retry workload before claiming contention or performance cost.",
+    "Promote only an approved common matrix to gem5 or SimCXL."
+  ],
+  "result_count": 399,
+  "status": "native_independent_policy_matrix_completed_no_value_winner"
+}

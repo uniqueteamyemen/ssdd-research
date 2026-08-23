@@ -1,0 +1,7 @@
+command: python3 comparison/ssdd_comparative_harness.py --output /home/ubuntu/ssdd-research/evidence/comparative/native-contract-smoke-20260823T161500Z --run-label native-contract-smoke-20260823T161500Z
+host: 305f57cac429
+utc: 2026-08-23T20:04:05Z
+research_commit: 899a85fcea82734117740aadd13786dcb9489729
+harness_sha256: 55543938b9302252c9ee1eab8cd89fb82f96b03ad266210b4f871fb929f01e48
+runner_sha256: 7de3dfcc0ebf54d7a95e3b333d4d16be0d1205c0dd9c6fe4d1fd221d627a71bd
+python: Python 3.12.3

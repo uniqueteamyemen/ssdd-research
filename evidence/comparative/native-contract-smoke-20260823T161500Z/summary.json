@@ -1,0 +1,44 @@
+{
+  "arms": {
+    "cas_retry": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_count": 128,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "single_writer_sequencer": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_count": 128,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    },
+    "ssdd": {
+      "accepted": 129,
+      "arrival_permutation_checkpoint_hash_count": 1,
+      "arrival_permutation_count": 128,
+      "arrival_permutation_invariant_under_contract": true,
+      "deferred": 1,
+      "rejected": 3
+    }
+  },
+  "case_count": 133,
+  "diagnostic_schema_completeness": {
+    "cas_retry": true,
+    "single_writer_sequencer": true,
+    "ssdd": true
+  },
+  "execution_domain": "local-native-single-process-policy-reference",
+  "manifest_hash": "7b7532e41a769cc7266bbad0940ef4e1f203302ec2d5d63ae56a27f4d7ab01b6",
+  "required_human_review": [
+    "Audit policy-surface inventory; do not infer complexity from the list count alone.",
+    "Audit decision records for explanatory usefulness under the same reviewer task.",
+    "Use an independently implemented concurrent baseline before any CAS/retry performance claim.",
+    "Use the separate preregistered KVM-to-Timing matrix before any performance-cost claim."
+  ],
+  "result_count": 399,
+  "status": "contract_smoke_completed_no_comparative_value_conclusion"
+}

@@ -1,0 +1,7 @@
+manifest.json: OK
+policy-surface-inventory.json: OK
+provenance.txt: OK
+results.json: OK
+stderr.log: OK
+stdout.log: OK
+summary.json: OK

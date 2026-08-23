@@ -97,6 +97,12 @@ Use **“full-system SimCXL/gem5 behavioral matrix”**, **“KVM-to-Timing exec
 
 ## 7. Fair SSDD-versus-conventional comparison protocol
 
+### Current local comparative status
+
+The first local policy-reference gates have now been completed under one 133-case contract: one positive control, 128 arrival permutations, exact conflicting identity, late-source/incomplete set, proof corruption, and candidate-state corruption. SSDD, the CAS/retry reference, and the single-writer-sequencer reference each produced 129 accepted, 3 rejected, and 1 deferred disposition, with one accepted referee checkpoint digest across the 128 arrival permutations. This **does not establish a winner**. The serious baselines explicitly added canonical candidate/queue-drain policies and matched the bounded semantic contract.[8]
+
+The honest current conclusion is therefore: **SSDD is not needed merely to obtain the tested semantics; a serious CAS/retry or sequencer alternative can match them in this bounded local scenario.** The remaining value question is whether one policy gives the engineer a materially clearer, more inspectable decision/evidence path under the same review task. That is pending the predeclared blinded reviewer and policy-surface review.[9]
+
 ### Purpose and fair question
 
 The future campaign must not ask whether conventional CXL systems are coherent or whether a weak baseline can be made to fail. It asks one narrower question:
@@ -158,6 +164,7 @@ If—and only if—the live form permits a repository or supplementary-material 
 | 6 | `docs/validation/cherry-measurement-claim-matrix-20260823.md` | Claim controls. |
 | 7 | `docs/validation/cherry-scl-lod-derived-timing-differences-20260823.md` | Reference-model timing means and derivation boundary. |
 | 8 | `docs/validation/ssdd-comparative-value-validation-plan-20260823.md` | Planned, not executed, fair comparative campaign. |
+| 9 | `docs/validation/ssdd-comparative-local-policy-matrix-evidence-20260823.md` | Completed bounded local result; explicitly no value winner. |
 
 Do not provide credentials, private data, unpublished infrastructure details, generated guest disks, or unrequested raw artifacts.
 
@@ -184,3 +191,5 @@ No AI author, presenter, affiliation, or contributor attribution is included in 
 [5] [Cherry measurement claim matrix](../validation/cherry-measurement-claim-matrix-20260823.md)  
 [6] [Chiplet Summit 2027 abstract variants](chiplet-summit-2027-abstract-variants.md)  
 [7] [Chiplet Summit 2027 requirements status](chiplet-summit-2027-requirements-status.md)
+[8] [Local comparative policy-matrix evidence](../validation/ssdd-comparative-local-policy-matrix-evidence-20260823.md)
+[9] [Blinded diagnostic and policy review protocol](../validation/ssdd-comparative-human-review-protocol-20260823.md)

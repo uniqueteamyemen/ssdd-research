@@ -1,0 +1,2553 @@
+{
+  "arms": [
+    "ssdd",
+    "cas_retry",
+    "single_writer_sequencer"
+  ],
+  "case_contract": [
+    {
+      "candidate_state_tamper": false,
+      "case_id": "positive-control",
+      "event_ids": [
+        "event-00",
+        "event-01",
+        "event-02",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-10",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-000",
+      "event_ids": [
+        "event-02",
+        "event-04",
+        "event-01",
+        "event-11",
+        "event-09",
+        "event-03",
+        "event-08",
+        "event-10",
+        "event-06",
+        "event-07",
+        "event-05",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-001",
+      "event_ids": [
+        "event-09",
+        "event-05",
+        "event-07",
+        "event-08",
+        "event-00",
+        "event-06",
+        "event-10",
+        "event-01",
+        "event-03",
+        "event-11",
+        "event-02",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-002",
+      "event_ids": [
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-01",
+        "event-10",
+        "event-02",
+        "event-00",
+        "event-11",
+        "event-06",
+        "event-09",
+        "event-07",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-003",
+      "event_ids": [
+        "event-04",
+        "event-09",
+        "event-10",
+        "event-00",
+        "event-01",
+        "event-07",
+        "event-08",
+        "event-05",
+        "event-06",
+        "event-02",
+        "event-11",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-004",
+      "event_ids": [
+        "event-04",
+        "event-10",
+        "event-08",
+        "event-07",
+        "event-06",
+        "event-03",
+        "event-02",
+        "event-00",
+        "event-09",
+        "event-11",
+        "event-05",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-005",
+      "event_ids": [
+        "event-06",
+        "event-04",
+        "event-09",
+        "event-02",
+        "event-10",
+        "event-01",
+        "event-08",
+        "event-05",
+        "event-00",
+        "event-07",
+        "event-11",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-006",
+      "event_ids": [
+        "event-01",
+        "event-09",
+        "event-11",
+        "event-10",
+        "event-07",
+        "event-04",
+        "event-03",
+        "event-05",
+        "event-06",
+        "event-08",
+        "event-00",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-007",
+      "event_ids": [
+        "event-07",
+        "event-11",
+        "event-00",
+        "event-01",
+        "event-09",
+        "event-04",
+        "event-05",
+        "event-02",
+        "event-10",
+        "event-03",
+        "event-06",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-008",
+      "event_ids": [
+        "event-05",
+        "event-01",
+        "event-04",
+        "event-08",
+        "event-11",
+        "event-07",
+        "event-03",
+        "event-09",
+        "event-06",
+        "event-10",
+        "event-02",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-009",
+      "event_ids": [
+        "event-02",
+        "event-07",
+        "event-11",
+        "event-05",
+        "event-00",
+        "event-01",
+        "event-04",
+        "event-09",
+        "event-10",
+        "event-08",
+        "event-06",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-010",
+      "event_ids": [
+        "event-06",
+        "event-00",
+        "event-10",
+        "event-11",
+        "event-05",
+        "event-03",
+        "event-04",
+        "event-09",
+        "event-07",
+        "event-02",
+        "event-08",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-011",
+      "event_ids": [
+        "event-05",
+        "event-06",
+        "event-02",
+        "event-11",
+        "event-04",
+        "event-09",
+        "event-01",
+        "event-00",
+        "event-10",
+        "event-07",
+        "event-03",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-012",
+      "event_ids": [
+        "event-02",
+        "event-03",
+        "event-11",
+        "event-00",
+        "event-06",
+        "event-07",
+        "event-10",
+        "event-09",
+        "event-05",
+        "event-01",
+        "event-04",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-013",
+      "event_ids": [
+        "event-07",
+        "event-02",
+        "event-03",
+        "event-10",
+        "event-05",
+        "event-08",
+        "event-11",
+        "event-01",
+        "event-09",
+        "event-04",
+        "event-00",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-014",
+      "event_ids": [
+        "event-11",
+        "event-01",
+        "event-08",
+        "event-07",
+        "event-09",
+        "event-00",
+        "event-10",
+        "event-04",
+        "event-06",
+        "event-02",
+        "event-05",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-015",
+      "event_ids": [
+        "event-00",
+        "event-11",
+        "event-03",
+        "event-09",
+        "event-01",
+        "event-07",
+        "event-02",
+        "event-04",
+        "event-05",
+        "event-08",
+        "event-06",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-016",
+      "event_ids": [
+        "event-03",
+        "event-11",
+        "event-00",
+        "event-09",
+        "event-05",
+        "event-02",
+        "event-10",
+        "event-04",
+        "event-01",
+        "event-08",
+        "event-07",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-017",
+      "event_ids": [
+        "event-10",
+        "event-11",
+        "event-07",
+        "event-01",
+        "event-08",
+        "event-02",
+        "event-04",
+        "event-03",
+        "event-00",
+        "event-09",
+        "event-05",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-018",
+      "event_ids": [
+        "event-01",
+        "event-08",
+        "event-07",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-11",
+        "event-06",
+        "event-10",
+        "event-00",
+        "event-09",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-019",
+      "event_ids": [
+        "event-10",
+        "event-01",
+        "event-03",
+        "event-06",
+        "event-05",
+        "event-07",
+        "event-11",
+        "event-09",
+        "event-08",
+        "event-00",
+        "event-02",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-020",
+      "event_ids": [
+        "event-06",
+        "event-04",
+        "event-08",
+        "event-01",
+        "event-07",
+        "event-05",
+        "event-03",
+        "event-09",
+        "event-00",
+        "event-02",
+        "event-11",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-021",
+      "event_ids": [
+        "event-01",
+        "event-03",
+        "event-04",
+        "event-08",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-09",
+        "event-00",
+        "event-11",
+        "event-10",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-022",
+      "event_ids": [
+        "event-10",
+        "event-06",
+        "event-07",
+        "event-11",
+        "event-00",
+        "event-04",
+        "event-01",
+        "event-02",
+        "event-09",
+        "event-08",
+        "event-05",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-023",
+      "event_ids": [
+        "event-02",
+        "event-03",
+        "event-09",
+        "event-08",
+        "event-10",
+        "event-05",
+        "event-04",
+        "event-11",
+        "event-00",
+        "event-01",
+        "event-06",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-024",
+      "event_ids": [
+        "event-04",
+        "event-11",
+        "event-02",
+        "event-07",
+        "event-03",
+        "event-09",
+        "event-05",
+        "event-00",
+        "event-01",
+        "event-10",
+        "event-06",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-025",
+      "event_ids": [
+        "event-02",
+        "event-01",
+        "event-06",
+        "event-03",
+        "event-04",
+        "event-07",
+        "event-10",
+        "event-05",
+        "event-08",
+        "event-11",
+        "event-09",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-026",
+      "event_ids": [
+        "event-03",
+        "event-11",
+        "event-05",
+        "event-06",
+        "event-01",
+        "event-00",
+        "event-10",
+        "event-02",
+        "event-04",
+        "event-07",
+        "event-09",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-027",
+      "event_ids": [
+        "event-02",
+        "event-09",
+        "event-06",
+        "event-04",
+        "event-11",
+        "event-05",
+        "event-01",
+        "event-10",
+        "event-00",
+        "event-03",
+        "event-07",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-028",
+      "event_ids": [
+        "event-00",
+        "event-10",
+        "event-11",
+        "event-03",
+        "event-01",
+        "event-02",
+        "event-09",
+        "event-07",
+        "event-08",
+        "event-04",
+        "event-05",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-029",
+      "event_ids": [
+        "event-10",
+        "event-08",
+        "event-09",
+        "event-11",
+        "event-00",
+        "event-01",
+        "event-04",
+        "event-06",
+        "event-02",
+        "event-07",
+        "event-03",
+        "event-05"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-030",
+      "event_ids": [
+        "event-03",
+        "event-06",
+        "event-11",
+        "event-10",
+        "event-04",
+        "event-02",
+        "event-05",
+        "event-00",
+        "event-08",
+        "event-01",
+        "event-07",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-031",
+      "event_ids": [
+        "event-08",
+        "event-02",
+        "event-00",
+        "event-06",
+        "event-07",
+        "event-01",
+        "event-03",
+        "event-09",
+        "event-11",
+        "event-10",
+        "event-04",
+        "event-05"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-032",
+      "event_ids": [
+        "event-01",
+        "event-04",
+        "event-09",
+        "event-00",
+        "event-05",
+        "event-02",
+        "event-08",
+        "event-10",
+        "event-03",
+        "event-11",
+        "event-06",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-033",
+      "event_ids": [
+        "event-11",
+        "event-07",
+        "event-00",
+        "event-10",
+        "event-09",
+        "event-06",
+        "event-03",
+        "event-08",
+        "event-04",
+        "event-05",
+        "event-02",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-034",
+      "event_ids": [
+        "event-08",
+        "event-07",
+        "event-06",
+        "event-02",
+        "event-10",
+        "event-00",
+        "event-05",
+        "event-03",
+        "event-11",
+        "event-01",
+        "event-09",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-035",
+      "event_ids": [
+        "event-02",
+        "event-00",
+        "event-09",
+        "event-05",
+        "event-07",
+        "event-04",
+        "event-01",
+        "event-03",
+        "event-08",
+        "event-10",
+        "event-06",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-036",
+      "event_ids": [
+        "event-06",
+        "event-09",
+        "event-04",
+        "event-05",
+        "event-03",
+        "event-01",
+        "event-00",
+        "event-11",
+        "event-10",
+        "event-08",
+        "event-07",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-037",
+      "event_ids": [
+        "event-10",
+        "event-03",
+        "event-01",
+        "event-11",
+        "event-05",
+        "event-04",
+        "event-08",
+        "event-06",
+        "event-02",
+        "event-07",
+        "event-00",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-038",
+      "event_ids": [
+        "event-00",
+        "event-10",
+        "event-04",
+        "event-01",
+        "event-03",
+        "event-11",
+        "event-05",
+        "event-09",
+        "event-08",
+        "event-07",
+        "event-02",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-039",
+      "event_ids": [
+        "event-11",
+        "event-06",
+        "event-02",
+        "event-08",
+        "event-04",
+        "event-07",
+        "event-10",
+        "event-00",
+        "event-01",
+        "event-05",
+        "event-09",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-040",
+      "event_ids": [
+        "event-09",
+        "event-02",
+        "event-07",
+        "event-10",
+        "event-08",
+        "event-00",
+        "event-04",
+        "event-01",
+        "event-11",
+        "event-03",
+        "event-06",
+        "event-05"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-041",
+      "event_ids": [
+        "event-11",
+        "event-05",
+        "event-06",
+        "event-08",
+        "event-03",
+        "event-01",
+        "event-02",
+        "event-04",
+        "event-10",
+        "event-00",
+        "event-07",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-042",
+      "event_ids": [
+        "event-00",
+        "event-09",
+        "event-07",
+        "event-10",
+        "event-04",
+        "event-06",
+        "event-11",
+        "event-08",
+        "event-05",
+        "event-02",
+        "event-01",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-043",
+      "event_ids": [
+        "event-11",
+        "event-05",
+        "event-00",
+        "event-04",
+        "event-10",
+        "event-02",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-01",
+        "event-06",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-044",
+      "event_ids": [
+        "event-07",
+        "event-04",
+        "event-01",
+        "event-06",
+        "event-00",
+        "event-03",
+        "event-09",
+        "event-02",
+        "event-05",
+        "event-11",
+        "event-10",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-045",
+      "event_ids": [
+        "event-08",
+        "event-00",
+        "event-09",
+        "event-07",
+        "event-06",
+        "event-11",
+        "event-10",
+        "event-02",
+        "event-03",
+        "event-05",
+        "event-01",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-046",
+      "event_ids": [
+        "event-07",
+        "event-04",
+        "event-06",
+        "event-01",
+        "event-03",
+        "event-11",
+        "event-09",
+        "event-02",
+        "event-10",
+        "event-05",
+        "event-00",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-047",
+      "event_ids": [
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-00",
+        "event-09",
+        "event-01",
+        "event-11",
+        "event-02",
+        "event-08",
+        "event-10",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-048",
+      "event_ids": [
+        "event-06",
+        "event-07",
+        "event-05",
+        "event-09",
+        "event-04",
+        "event-11",
+        "event-10",
+        "event-01",
+        "event-00",
+        "event-03",
+        "event-08",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-049",
+      "event_ids": [
+        "event-04",
+        "event-01",
+        "event-06",
+        "event-05",
+        "event-00",
+        "event-10",
+        "event-11",
+        "event-09",
+        "event-02",
+        "event-07",
+        "event-08",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-050",
+      "event_ids": [
+        "event-02",
+        "event-11",
+        "event-06",
+        "event-05",
+        "event-09",
+        "event-01",
+        "event-10",
+        "event-00",
+        "event-07",
+        "event-08",
+        "event-04",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-051",
+      "event_ids": [
+        "event-03",
+        "event-08",
+        "event-05",
+        "event-02",
+        "event-04",
+        "event-11",
+        "event-09",
+        "event-01",
+        "event-06",
+        "event-07",
+        "event-00",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-052",
+      "event_ids": [
+        "event-07",
+        "event-02",
+        "event-06",
+        "event-09",
+        "event-05",
+        "event-01",
+        "event-00",
+        "event-10",
+        "event-08",
+        "event-11",
+        "event-04",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-053",
+      "event_ids": [
+        "event-11",
+        "event-03",
+        "event-04",
+        "event-01",
+        "event-08",
+        "event-10",
+        "event-02",
+        "event-05",
+        "event-07",
+        "event-06",
+        "event-09",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-054",
+      "event_ids": [
+        "event-11",
+        "event-06",
+        "event-05",
+        "event-02",
+        "event-08",
+        "event-07",
+        "event-01",
+        "event-03",
+        "event-10",
+        "event-04",
+        "event-00",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-055",
+      "event_ids": [
+        "event-08",
+        "event-03",
+        "event-02",
+        "event-00",
+        "event-11",
+        "event-06",
+        "event-01",
+        "event-10",
+        "event-05",
+        "event-09",
+        "event-04",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-056",
+      "event_ids": [
+        "event-00",
+        "event-08",
+        "event-04",
+        "event-02",
+        "event-06",
+        "event-03",
+        "event-11",
+        "event-09",
+        "event-01",
+        "event-05",
+        "event-10",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-057",
+      "event_ids": [
+        "event-07",
+        "event-01",
+        "event-10",
+        "event-09",
+        "event-02",
+        "event-03",
+        "event-05",
+        "event-06",
+        "event-11",
+        "event-04",
+        "event-08",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-058",
+      "event_ids": [
+        "event-04",
+        "event-07",
+        "event-01",
+        "event-06",
+        "event-02",
+        "event-11",
+        "event-05",
+        "event-10",
+        "event-00",
+        "event-09",
+        "event-03",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-059",
+      "event_ids": [
+        "event-03",
+        "event-11",
+        "event-10",
+        "event-05",
+        "event-00",
+        "event-01",
+        "event-09",
+        "event-07",
+        "event-04",
+        "event-02",
+        "event-08",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-060",
+      "event_ids": [
+        "event-00",
+        "event-10",
+        "event-01",
+        "event-04",
+        "event-02",
+        "event-08",
+        "event-06",
+        "event-09",
+        "event-05",
+        "event-07",
+        "event-11",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-061",
+      "event_ids": [
+        "event-10",
+        "event-08",
+        "event-04",
+        "event-00",
+        "event-05",
+        "event-01",
+        "event-02",
+        "event-11",
+        "event-09",
+        "event-06",
+        "event-03",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-062",
+      "event_ids": [
+        "event-08",
+        "event-05",
+        "event-07",
+        "event-01",
+        "event-00",
+        "event-10",
+        "event-04",
+        "event-03",
+        "event-02",
+        "event-09",
+        "event-11",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-063",
+      "event_ids": [
+        "event-10",
+        "event-11",
+        "event-08",
+        "event-09",
+        "event-01",
+        "event-04",
+        "event-07",
+        "event-03",
+        "event-02",
+        "event-05",
+        "event-06",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-064",
+      "event_ids": [
+        "event-01",
+        "event-02",
+        "event-10",
+        "event-04",
+        "event-08",
+        "event-07",
+        "event-00",
+        "event-11",
+        "event-03",
+        "event-05",
+        "event-06",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-065",
+      "event_ids": [
+        "event-09",
+        "event-07",
+        "event-08",
+        "event-04",
+        "event-00",
+        "event-05",
+        "event-03",
+        "event-01",
+        "event-02",
+        "event-06",
+        "event-11",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-066",
+      "event_ids": [
+        "event-06",
+        "event-11",
+        "event-05",
+        "event-03",
+        "event-00",
+        "event-10",
+        "event-07",
+        "event-01",
+        "event-09",
+        "event-08",
+        "event-04",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-067",
+      "event_ids": [
+        "event-10",
+        "event-03",
+        "event-02",
+        "event-07",
+        "event-05",
+        "event-08",
+        "event-04",
+        "event-01",
+        "event-09",
+        "event-06",
+        "event-00",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-068",
+      "event_ids": [
+        "event-07",
+        "event-03",
+        "event-09",
+        "event-04",
+        "event-02",
+        "event-00",
+        "event-01",
+        "event-06",
+        "event-05",
+        "event-11",
+        "event-10",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-069",
+      "event_ids": [
+        "event-08",
+        "event-09",
+        "event-04",
+        "event-06",
+        "event-01",
+        "event-00",
+        "event-11",
+        "event-07",
+        "event-03",
+        "event-05",
+        "event-02",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-070",
+      "event_ids": [
+        "event-09",
+        "event-04",
+        "event-06",
+        "event-07",
+        "event-00",
+        "event-03",
+        "event-11",
+        "event-02",
+        "event-01",
+        "event-05",
+        "event-10",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-071",
+      "event_ids": [
+        "event-01",
+        "event-05",
+        "event-00",
+        "event-02",
+        "event-06",
+        "event-04",
+        "event-07",
+        "event-03",
+        "event-09",
+        "event-08",
+        "event-10",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-072",
+      "event_ids": [
+        "event-06",
+        "event-11",
+        "event-00",
+        "event-09",
+        "event-05",
+        "event-08",
+        "event-07",
+        "event-03",
+        "event-01",
+        "event-10",
+        "event-04",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-073",
+      "event_ids": [
+        "event-01",
+        "event-11",
+        "event-06",
+        "event-04",
+        "event-08",
+        "event-09",
+        "event-05",
+        "event-07",
+        "event-02",
+        "event-00",
+        "event-03",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-074",
+      "event_ids": [
+        "event-07",
+        "event-02",
+        "event-10",
+        "event-04",
+        "event-03",
+        "event-00",
+        "event-11",
+        "event-08",
+        "event-09",
+        "event-05",
+        "event-01",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-075",
+      "event_ids": [
+        "event-11",
+        "event-04",
+        "event-10",
+        "event-06",
+        "event-05",
+        "event-08",
+        "event-00",
+        "event-02",
+        "event-01",
+        "event-07",
+        "event-09",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-076",
+      "event_ids": [
+        "event-00",
+        "event-04",
+        "event-07",
+        "event-02",
+        "event-03",
+        "event-01",
+        "event-11",
+        "event-05",
+        "event-10",
+        "event-06",
+        "event-09",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-077",
+      "event_ids": [
+        "event-02",
+        "event-08",
+        "event-09",
+        "event-05",
+        "event-07",
+        "event-01",
+        "event-06",
+        "event-04",
+        "event-10",
+        "event-11",
+        "event-00",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-078",
+      "event_ids": [
+        "event-07",
+        "event-08",
+        "event-01",
+        "event-05",
+        "event-03",
+        "event-09",
+        "event-06",
+        "event-00",
+        "event-10",
+        "event-11",
+        "event-04",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-079",
+      "event_ids": [
+        "event-08",
+        "event-04",
+        "event-07",
+        "event-09",
+        "event-06",
+        "event-00",
+        "event-11",
+        "event-01",
+        "event-05",
+        "event-03",
+        "event-10",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-080",
+      "event_ids": [
+        "event-08",
+        "event-05",
+        "event-01",
+        "event-04",
+        "event-02",
+        "event-11",
+        "event-10",
+        "event-03",
+        "event-00",
+        "event-07",
+        "event-06",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-081",
+      "event_ids": [
+        "event-10",
+        "event-01",
+        "event-07",
+        "event-08",
+        "event-00",
+        "event-09",
+        "event-06",
+        "event-02",
+        "event-04",
+        "event-11",
+        "event-05",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-082",
+      "event_ids": [
+        "event-09",
+        "event-05",
+        "event-06",
+        "event-04",
+        "event-10",
+        "event-02",
+        "event-01",
+        "event-11",
+        "event-03",
+        "event-00",
+        "event-08",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-083",
+      "event_ids": [
+        "event-07",
+        "event-06",
+        "event-05",
+        "event-01",
+        "event-02",
+        "event-09",
+        "event-11",
+        "event-04",
+        "event-00",
+        "event-10",
+        "event-03",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-084",
+      "event_ids": [
+        "event-02",
+        "event-08",
+        "event-07",
+        "event-10",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-00",
+        "event-01",
+        "event-11",
+        "event-06",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-085",
+      "event_ids": [
+        "event-11",
+        "event-08",
+        "event-06",
+        "event-02",
+        "event-03",
+        "event-01",
+        "event-04",
+        "event-00",
+        "event-07",
+        "event-09",
+        "event-10",
+        "event-05"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-086",
+      "event_ids": [
+        "event-03",
+        "event-05",
+        "event-01",
+        "event-02",
+        "event-10",
+        "event-11",
+        "event-07",
+        "event-06",
+        "event-09",
+        "event-00",
+        "event-04",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-087",
+      "event_ids": [
+        "event-09",
+        "event-10",
+        "event-11",
+        "event-06",
+        "event-04",
+        "event-07",
+        "event-02",
+        "event-08",
+        "event-05",
+        "event-01",
+        "event-00",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-088",
+      "event_ids": [
+        "event-03",
+        "event-02",
+        "event-08",
+        "event-01",
+        "event-10",
+        "event-11",
+        "event-07",
+        "event-04",
+        "event-06",
+        "event-05",
+        "event-09",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-089",
+      "event_ids": [
+        "event-05",
+        "event-01",
+        "event-06",
+        "event-09",
+        "event-02",
+        "event-00",
+        "event-08",
+        "event-11",
+        "event-10",
+        "event-03",
+        "event-04",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-090",
+      "event_ids": [
+        "event-01",
+        "event-10",
+        "event-04",
+        "event-00",
+        "event-05",
+        "event-11",
+        "event-07",
+        "event-09",
+        "event-08",
+        "event-06",
+        "event-03",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-091",
+      "event_ids": [
+        "event-05",
+        "event-11",
+        "event-00",
+        "event-10",
+        "event-07",
+        "event-02",
+        "event-09",
+        "event-01",
+        "event-08",
+        "event-04",
+        "event-06",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-092",
+      "event_ids": [
+        "event-02",
+        "event-04",
+        "event-10",
+        "event-05",
+        "event-07",
+        "event-00",
+        "event-01",
+        "event-09",
+        "event-06",
+        "event-03",
+        "event-08",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-093",
+      "event_ids": [
+        "event-09",
+        "event-05",
+        "event-10",
+        "event-00",
+        "event-07",
+        "event-03",
+        "event-06",
+        "event-11",
+        "event-04",
+        "event-08",
+        "event-01",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-094",
+      "event_ids": [
+        "event-09",
+        "event-05",
+        "event-00",
+        "event-11",
+        "event-03",
+        "event-08",
+        "event-06",
+        "event-02",
+        "event-04",
+        "event-07",
+        "event-10",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-095",
+      "event_ids": [
+        "event-03",
+        "event-00",
+        "event-07",
+        "event-06",
+        "event-11",
+        "event-01",
+        "event-05",
+        "event-04",
+        "event-02",
+        "event-08",
+        "event-09",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-096",
+      "event_ids": [
+        "event-01",
+        "event-02",
+        "event-09",
+        "event-03",
+        "event-05",
+        "event-06",
+        "event-10",
+        "event-08",
+        "event-07",
+        "event-00",
+        "event-11",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-097",
+      "event_ids": [
+        "event-11",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-00",
+        "event-01",
+        "event-04",
+        "event-08",
+        "event-02",
+        "event-10",
+        "event-03",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-098",
+      "event_ids": [
+        "event-11",
+        "event-09",
+        "event-05",
+        "event-04",
+        "event-06",
+        "event-01",
+        "event-07",
+        "event-08",
+        "event-00",
+        "event-02",
+        "event-03",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-099",
+      "event_ids": [
+        "event-01",
+        "event-05",
+        "event-07",
+        "event-06",
+        "event-08",
+        "event-00",
+        "event-04",
+        "event-02",
+        "event-09",
+        "event-11",
+        "event-10",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-100",
+      "event_ids": [
+        "event-07",
+        "event-05",
+        "event-09",
+        "event-02",
+        "event-04",
+        "event-03",
+        "event-08",
+        "event-06",
+        "event-01",
+        "event-10",
+        "event-00",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-101",
+      "event_ids": [
+        "event-04",
+        "event-00",
+        "event-03",
+        "event-06",
+        "event-02",
+        "event-11",
+        "event-05",
+        "event-01",
+        "event-10",
+        "event-09",
+        "event-07",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-102",
+      "event_ids": [
+        "event-01",
+        "event-09",
+        "event-05",
+        "event-00",
+        "event-10",
+        "event-11",
+        "event-08",
+        "event-07",
+        "event-02",
+        "event-06",
+        "event-04",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-103",
+      "event_ids": [
+        "event-10",
+        "event-05",
+        "event-06",
+        "event-09",
+        "event-02",
+        "event-04",
+        "event-07",
+        "event-03",
+        "event-01",
+        "event-00",
+        "event-08",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-104",
+      "event_ids": [
+        "event-07",
+        "event-04",
+        "event-02",
+        "event-09",
+        "event-01",
+        "event-10",
+        "event-08",
+        "event-05",
+        "event-06",
+        "event-00",
+        "event-03",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-105",
+      "event_ids": [
+        "event-00",
+        "event-06",
+        "event-08",
+        "event-02",
+        "event-04",
+        "event-11",
+        "event-09",
+        "event-05",
+        "event-03",
+        "event-07",
+        "event-01",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-106",
+      "event_ids": [
+        "event-08",
+        "event-11",
+        "event-01",
+        "event-05",
+        "event-07",
+        "event-06",
+        "event-03",
+        "event-04",
+        "event-09",
+        "event-02",
+        "event-10",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-107",
+      "event_ids": [
+        "event-06",
+        "event-03",
+        "event-08",
+        "event-02",
+        "event-05",
+        "event-07",
+        "event-01",
+        "event-09",
+        "event-04",
+        "event-11",
+        "event-10",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-108",
+      "event_ids": [
+        "event-07",
+        "event-05",
+        "event-11",
+        "event-02",
+        "event-01",
+        "event-00",
+        "event-09",
+        "event-06",
+        "event-04",
+        "event-03",
+        "event-10",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-109",
+      "event_ids": [
+        "event-07",
+        "event-09",
+        "event-02",
+        "event-05",
+        "event-08",
+        "event-06",
+        "event-01",
+        "event-03",
+        "event-00",
+        "event-04",
+        "event-10",
+        "event-11"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-110",
+      "event_ids": [
+        "event-09",
+        "event-02",
+        "event-00",
+        "event-01",
+        "event-04",
+        "event-07",
+        "event-10",
+        "event-05",
+        "event-06",
+        "event-11",
+        "event-08",
+        "event-03"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-111",
+      "event_ids": [
+        "event-06",
+        "event-11",
+        "event-10",
+        "event-05",
+        "event-02",
+        "event-03",
+        "event-08",
+        "event-04",
+        "event-00",
+        "event-07",
+        "event-09",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-112",
+      "event_ids": [
+        "event-09",
+        "event-06",
+        "event-11",
+        "event-00",
+        "event-02",
+        "event-08",
+        "event-05",
+        "event-07",
+        "event-01",
+        "event-10",
+        "event-03",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-113",
+      "event_ids": [
+        "event-02",
+        "event-01",
+        "event-11",
+        "event-00",
+        "event-03",
+        "event-09",
+        "event-04",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-10",
+        "event-05"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-114",
+      "event_ids": [
+        "event-10",
+        "event-03",
+        "event-08",
+        "event-01",
+        "event-05",
+        "event-00",
+        "event-11",
+        "event-02",
+        "event-09",
+        "event-06",
+        "event-07",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-115",
+      "event_ids": [
+        "event-10",
+        "event-00",
+        "event-07",
+        "event-05",
+        "event-03",
+        "event-08",
+        "event-11",
+        "event-01",
+        "event-04",
+        "event-06",
+        "event-09",
+        "event-02"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-116",
+      "event_ids": [
+        "event-08",
+        "event-07",
+        "event-03",
+        "event-11",
+        "event-10",
+        "event-02",
+        "event-06",
+        "event-05",
+        "event-09",
+        "event-00",
+        "event-04",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-117",
+      "event_ids": [
+        "event-07",
+        "event-09",
+        "event-10",
+        "event-03",
+        "event-00",
+        "event-02",
+        "event-05",
+        "event-08",
+        "event-06",
+        "event-11",
+        "event-01",
+        "event-04"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-118",
+      "event_ids": [
+        "event-04",
+        "event-01",
+        "event-10",
+        "event-11",
+        "event-02",
+        "event-03",
+        "event-00",
+        "event-08",
+        "event-07",
+        "event-05",
+        "event-09",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-119",
+      "event_ids": [
+        "event-09",
+        "event-10",
+        "event-00",
+        "event-04",
+        "event-01",
+        "event-02",
+        "event-08",
+        "event-11",
+        "event-05",
+        "event-06",
+        "event-03",
+        "event-07"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-120",
+      "event_ids": [
+        "event-03",
+        "event-08",
+        "event-10",
+        "event-06",
+        "event-05",
+        "event-01",
+        "event-11",
+        "event-02",
+        "event-07",
+        "event-04",
+        "event-00",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-121",
+      "event_ids": [
+        "event-03",
+        "event-02",
+        "event-11",
+        "event-00",
+        "event-09",
+        "event-04",
+        "event-07",
+        "event-05",
+        "event-10",
+        "event-06",
+        "event-08",
+        "event-01"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-122",
+      "event_ids": [
+        "event-07",
+        "event-11",
+        "event-00",
+        "event-01",
+        "event-08",
+        "event-05",
+        "event-09",
+        "event-03",
+        "event-06",
+        "event-04",
+        "event-02",
+        "event-10"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-123",
+      "event_ids": [
+        "event-07",
+        "event-04",
+        "event-11",
+        "event-09",
+        "event-10",
+        "event-02",
+        "event-08",
+        "event-06",
+        "event-03",
+        "event-05",
+        "event-01",
+        "event-00"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-124",
+      "event_ids": [
+        "event-02",
+        "event-05",
+        "event-10",
+        "event-01",
+        "event-07",
+        "event-04",
+        "event-03",
+        "event-00",
+        "event-08",
+        "event-11",
+        "event-06",
+        "event-09"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-125",
+      "event_ids": [
+        "event-05",
+        "event-07",
+        "event-04",
+        "event-06",
+        "event-01",
+        "event-00",
+        "event-11",
+        "event-02",
+        "event-09",
+        "event-03",
+        "event-10",
+        "event-08"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-126",
+      "event_ids": [
+        "event-09",
+        "event-00",
+        "event-02",
+        "event-08",
+        "event-01",
+        "event-11",
+        "event-10",
+        "event-05",
+        "event-07",
+        "event-04",
+        "event-03",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "arrival-permutation-127",
+      "event_ids": [
+        "event-01",
+        "event-05",
+        "event-03",
+        "event-07",
+        "event-08",
+        "event-02",
+        "event-11",
+        "event-00",
+        "event-10",
+        "event-09",
+        "event-04",
+        "event-06"
+      ],
+      "expected_disposition": "accepted"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "exact-event-id-collision",
+      "event_ids": [
+        "event-00",
+        "event-01",
+        "event-02",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-10",
+        "event-11",
+        "event-02"
+      ],
+      "expected_disposition": "rejected"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "late-source",
+      "event_ids": [
+        "event-00",
+        "event-01",
+        "event-02",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-10"
+      ],
+      "expected_disposition": "deferred"
+    },
+    {
+      "candidate_state_tamper": false,
+      "case_id": "proof-corruption",
+      "event_ids": [
+        "event-00",
+        "event-01",
+        "event-02",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-10",
+        "event-11"
+      ],
+      "expected_disposition": "rejected"
+    },
+    {
+      "candidate_state_tamper": true,
+      "case_id": "candidate-state-corruption",
+      "event_ids": [
+        "event-00",
+        "event-01",
+        "event-02",
+        "event-03",
+        "event-04",
+        "event-05",
+        "event-06",
+        "event-07",
+        "event-08",
+        "event-09",
+        "event-10",
+        "event-11"
+      ],
+      "expected_disposition": "rejected"
+    }
+  ],
+  "execution_domain": "local-native-threaded-policy-references",
+  "non_claims": [
+    "No latency, jitter, p95/p99, throughput, overhead, scaling, hardware, CXL, or production claim.",
+    "Thread scheduling/order traces are not reproducibility or performance metrics.",
+    "No automatic comparative-value winner."
+  ],
+  "purpose": "independent concurrent admission/publish-path semantics without timing metrics",
+  "required_diagnostic_fields": [
+    "manifest_hash",
+    "decision_record",
+    "checkpoint_hash",
+    "prior_valid_checkpoint_hash",
+    "disposition",
+    "reason"
+  ],
+  "run_label": "concurrent-local-policy-20260823T170000Z",
+  "suite": "ssdd-comparative-value-local-concurrent-policy-matrix"
+}

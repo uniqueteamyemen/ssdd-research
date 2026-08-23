@@ -1,0 +1,27 @@
+{
+  "cas_retry": [
+    "event identity/idempotency treatment",
+    "versioned compare-and-swap reservation",
+    "retry/conflict handling",
+    "timeout or late-source disposition",
+    "candidate validation before commit",
+    "recovery/audit record"
+  ],
+  "single_writer_sequencer": [
+    "enqueue contract",
+    "ordering/publication rule",
+    "writer availability/failover treatment",
+    "retry or late-source disposition",
+    "candidate validation before commit",
+    "checkpoint/audit record"
+  ],
+  "ssdd": [
+    "four-field canonical ordering",
+    "exact-key collision treatment",
+    "declared reduction",
+    "state/hash chain",
+    "candidate validation before commit",
+    "reject/defer disposition"
+  ],
+  "status": "predeclared human-review inventory; no automatic policy-complexity winner"
+}

@@ -1,0 +1,7 @@
+command: python3 comparison/independent_policy_matrix.py --output /home/ubuntu/ssdd-research/evidence/comparative/native-independent-policy-20260823T163000Z --run-label native-independent-policy-20260823T163000Z
+host: 305f57cac429
+utc: 2026-08-23T20:05:23Z
+research_commit: 899a85fcea82734117740aadd13786dcb9489729
+matrix_sha256: 5638fcf1be775e1dda696cd73b301d70b5692b79ddbd119b5b0dfb0b7c4b3f26
+runner_sha256: 244103d2efd38021d28104c00151926169cbcbc0a4da6eb959d7972cf45af3c0
+python: Python 3.12.3
