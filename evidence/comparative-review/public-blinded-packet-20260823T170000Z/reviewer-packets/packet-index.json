@@ -1,0 +1,92 @@
+[
+  {
+    "arm_label": "A",
+    "case_id": "positive-control",
+    "packet_id": "positive-control__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "positive-control",
+    "packet_id": "positive-control__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "positive-control",
+    "packet_id": "positive-control__C"
+  },
+  {
+    "arm_label": "A",
+    "case_id": "arrival-permutation-064",
+    "packet_id": "arrival-permutation-064__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "arrival-permutation-064",
+    "packet_id": "arrival-permutation-064__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "arrival-permutation-064",
+    "packet_id": "arrival-permutation-064__C"
+  },
+  {
+    "arm_label": "A",
+    "case_id": "exact-event-id-collision",
+    "packet_id": "exact-event-id-collision__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "exact-event-id-collision",
+    "packet_id": "exact-event-id-collision__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "exact-event-id-collision",
+    "packet_id": "exact-event-id-collision__C"
+  },
+  {
+    "arm_label": "A",
+    "case_id": "late-source",
+    "packet_id": "late-source__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "late-source",
+    "packet_id": "late-source__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "late-source",
+    "packet_id": "late-source__C"
+  },
+  {
+    "arm_label": "A",
+    "case_id": "proof-corruption",
+    "packet_id": "proof-corruption__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "proof-corruption",
+    "packet_id": "proof-corruption__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "proof-corruption",
+    "packet_id": "proof-corruption__C"
+  },
+  {
+    "arm_label": "A",
+    "case_id": "candidate-state-corruption",
+    "packet_id": "candidate-state-corruption__A"
+  },
+  {
+    "arm_label": "B",
+    "case_id": "candidate-state-corruption",
+    "packet_id": "candidate-state-corruption__B"
+  },
+  {
+    "arm_label": "C",
+    "case_id": "candidate-state-corruption",
+    "packet_id": "candidate-state-corruption__C"
+  }
+]

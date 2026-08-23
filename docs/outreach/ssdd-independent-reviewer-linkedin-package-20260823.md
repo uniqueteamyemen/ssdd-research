@@ -21,31 +21,31 @@ The invitation asks reviewers whether the retained decision/evidence path is mor
 >
 > The remaining question is human and practical: from a blinded evidence bundle, can an engineer determine the disposition rule, material condition, prior valid checkpoint, and policy surface more clearly in one approach than in the others?
 >
-> We are looking for **independent systems engineers, distributed-systems engineers, memory-system architects, or researchers** willing to review a small blinded packet. You do not need to agree with SSDD. A result that favors CAS/retry or a sequencer is equally useful.
+> We are looking specifically for **independent systems engineers, distributed-systems engineers, memory-system architects, verification/reliability practitioners, and systems researchers**. This is not general engagement: the review asks whether a real engineer can reconstruct a shared-state decision, identify the material condition, and locate the policy surface to change. You do not need to agree with SSDD. A result that favors CAS/retry or a sequencer is equally useful.
 >
 > The review is bounded: six short cases, three unlabeled policy records per case, and five fixed questions per record. No confidential infrastructure access, source-code change, benchmark run, or product endorsement is requested.
 >
-> If you are willing to participate, please comment **“review”** or send a direct message. We will share the integrity-checked packet, hold the label key until responses are locked, and publish the outcome—including a no-difference or unfavorable result—within the stated scope.
+> **No contact or permission is required.** Open the public self-service packet at <https://github.com/uniqueteamyemen/ssdd-research/blob/main/docs/review/ssdd-public-self-service-review.md>, verify its checksums, and submit the blinded response directly through the included GitHub Issue template. The A/B/C label key is withheld until responses are locked. The aggregate outcome—including no difference or a baseline-favoring result—will be published within the stated scope.
 >
 > #DistributedSystems #SystemsEngineering #ComputerArchitecture #CXL #Verification #OpenResearch
 
 ## 3. Short LinkedIn post — alternative
 
-> Looking for independent systems reviewers. We tested SSDD, CAS/retry, and a single-writer sequencer on the same bounded shared-state contract. The honest current result: all three meet the tested semantics when the baselines explicitly add canonicalization; there is no declared winner.
+> Looking for independent systems, distributed-systems, verification, and memory-architecture reviewers. We tested SSDD, CAS/retry, and a single-writer sequencer on the same bounded shared-state contract. The honest current result: all three meet the tested semantics when the baselines explicitly add canonicalization; there is no declared winner.
 >
-> We now need blinded review of decision records: which policy makes acceptance/rejection/defer decisions and prior valid state easiest to inspect? No product endorsement or benchmark required. Comment **“review”** or DM for the integrity-checked packet.
+> We now need blinded review of decision records: which policy makes acceptance/rejection/defer decisions and prior valid state easiest to inspect? No product endorsement or benchmark required. Participate directly—no message or approval required: <https://github.com/uniqueteamyemen/ssdd-research/blob/main/docs/review/ssdd-public-self-service-review.md>
 >
 > #SystemsEngineering #DistributedSystems #ComputerArchitecture
 
-## 4. Comment reply for interested reviewers
+## 4. Optional comment reply for interested reviewers
 
-> Thank you. The review is a bounded blinded exercise, not a request to validate a product or accept a claim. I will send: (1) a short protocol, (2) six cases × three unlabeled records, and (3) a response sheet with five fixed questions. Please do not infer or request the label key until responses are locked. A conclusion of “no meaningful clarity difference” is a valid result.
+> Thank you. You can participate immediately without waiting for a reply: <https://github.com/uniqueteamyemen/ssdd-research/blob/main/docs/review/ssdd-public-self-service-review.md>. The public packet includes the protocol, six cases × three unlabeled records, checksum verification, and the direct response template. Please do not infer or request the label key until responses are locked. A conclusion of “no meaningful clarity difference” is a valid result.
 
-## 5. Direct-message invitation
+## 5. Optional direct-message invitation
 
 > Hello [Name],
 >
-> Thank you for offering to review. We are running a small independent review of three unlabeled shared-state policy records. The purpose is not to prove SSDD superior; the current local semantic result is a tie after the conventional references explicitly include canonicalization.
+> Thank you for offering to review. You may participate immediately through the public workflow; no approval is needed: <https://github.com/uniqueteamyemen/ssdd-research/blob/main/docs/review/ssdd-public-self-service-review.md>. We are running a small independent review of three unlabeled shared-state policy records. The purpose is not to prove SSDD superior; the current local semantic result is a tie after the conventional references explicitly include canonicalization.
 >
 > Your task is to inspect six short cases and answer the same five questions for each: publication/disposition, governing rule, material event/condition, prior valid checkpoint, and policy surface to change for a different outcome. Please record elapsed time and any uncertainty.
 >
@@ -55,10 +55,10 @@ The invitation asks reviewers whether the retained decision/evidence path is mor
 
 | Stage | Owner action | Reviewer action | Integrity control |
 |---|---|---|---|
-| Interest | Receive comment or direct message. | State relevant systems/distributed-systems experience. | Do not reveal arm labels. |
-| Eligibility | Confirm no direct implementation role in the compared code and no promise of a favorable conclusion. | Confirm willingness to report “no difference” or a baseline-favoring outcome. | Retain a minimal participation log without unnecessary personal data. |
-| Packet delivery | Share the blinded packet directory only. | Verify `SHA256SUMS` using `checksum-verification.txt`. | Keep `unblinding-key.json` outside the shared packet. |
-| Review | Provide the same protocol and time budget to every reviewer. | Answer five fixed questions per packet; record elapsed time and uncertainty. | Lock responses before any unblinding. |
+| Self-enrolment | Reviewer opens the public protocol. | State relevant systems/distributed-systems experience in the Issue template. | Do not reveal arm labels. |
+| Eligibility | Apply the predeclared Issue-template controls after submission. | Confirm no direct implementation role and willingness to report “no difference” or a baseline-favoring outcome. | Retain only a minimal participation log without unnecessary personal data. |
+| Packet retrieval | No manual sharing required. | Verify `SHA256SUMS` using `checksum-verification.txt`. | Keep `unblinding-key.json` outside the public repository. |
+| Review | Provide one fixed public protocol and response template. | Answer five fixed questions per packet; record elapsed time and uncertainty. | Lock eligible Issue responses before any unblinding. |
 | Unblinding | Reveal A/B/C mapping only after responses are locked. | Review aggregate outcome and correction notes. | Preserve raw anonymized responses and result methodology. |
 
 ## 7. Reviewer response sheet

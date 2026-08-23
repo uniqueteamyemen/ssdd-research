@@ -1,0 +1,83 @@
+{
+  "arm_label": "B",
+  "case_id": "late-source",
+  "checkpoint_hash": null,
+  "decision_record": {
+    "admission_log": [
+      {
+        "attempts": 1,
+        "event_id": "event-10",
+        "outcome": "published_to_versioned_store",
+        "published_version": 1
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-00",
+        "outcome": "published_to_versioned_store",
+        "published_version": 2
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-01",
+        "outcome": "published_to_versioned_store",
+        "published_version": 3
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-02",
+        "outcome": "published_to_versioned_store",
+        "published_version": 4
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-03",
+        "outcome": "published_to_versioned_store",
+        "published_version": 5
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-04",
+        "outcome": "published_to_versioned_store",
+        "published_version": 6
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-05",
+        "outcome": "published_to_versioned_store",
+        "published_version": 7
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-06",
+        "outcome": "published_to_versioned_store",
+        "published_version": 8
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-07",
+        "outcome": "published_to_versioned_store",
+        "published_version": 9
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-08",
+        "outcome": "published_to_versioned_store",
+        "published_version": 10
+      },
+      {
+        "attempts": 2,
+        "event_id": "event-09",
+        "outcome": "published_to_versioned_store",
+        "published_version": 11
+      }
+    ],
+    "commit": "not_published",
+    "final_store_version": 11,
+    "policy": "concurrent-versioned-cas-retry-with-canonicalized-candidate"
+  },
+  "disposition": "deferred",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "packet_id": "late-source__B",
+  "prior_valid_checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reason": "cas_retry:incomplete_or_unexpected_set:missing=['event-11'];unexpected=[]"
+}

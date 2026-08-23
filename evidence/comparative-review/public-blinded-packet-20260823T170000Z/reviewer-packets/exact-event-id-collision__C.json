@@ -1,0 +1,32 @@
+{
+  "arm_label": "C",
+  "case_id": "exact-event-id-collision",
+  "checkpoint_hash": null,
+  "decision_record": {
+    "commit": "not_published",
+    "enqueue_log": [
+      {
+        "event_id": "event-02",
+        "queue_position": 0
+      },
+      {
+        "event_id": "event-00",
+        "queue_position": 1
+      },
+      {
+        "event_id": "event-01",
+        "queue_position": 2
+      },
+      {
+        "event_id": "event-02",
+        "queue_position": 3
+      }
+    ],
+    "policy": "concurrent-producer-single-writer-sequencer"
+  },
+  "disposition": "rejected",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "packet_id": "exact-event-id-collision__C",
+  "prior_valid_checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reason": "single_writer_sequencer:conflicting_event_id:event-02"
+}

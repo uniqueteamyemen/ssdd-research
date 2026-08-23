@@ -1,0 +1,82 @@
+{
+  "arm_label": "C",
+  "case_id": "candidate-state-corruption",
+  "checkpoint_hash": null,
+  "decision_record": {
+    "candidate_state": -5,
+    "canonical_queue_drain_policy_surface": "explicit",
+    "commit": "not_published",
+    "enqueue_log": [
+      {
+        "event_id": "event-11",
+        "queue_position": 0
+      },
+      {
+        "event_id": "event-00",
+        "queue_position": 1
+      },
+      {
+        "event_id": "event-01",
+        "queue_position": 2
+      },
+      {
+        "event_id": "event-02",
+        "queue_position": 3
+      },
+      {
+        "event_id": "event-03",
+        "queue_position": 4
+      },
+      {
+        "event_id": "event-04",
+        "queue_position": 5
+      },
+      {
+        "event_id": "event-05",
+        "queue_position": 6
+      },
+      {
+        "event_id": "event-06",
+        "queue_position": 7
+      },
+      {
+        "event_id": "event-07",
+        "queue_position": 8
+      },
+      {
+        "event_id": "event-08",
+        "queue_position": 9
+      },
+      {
+        "event_id": "event-09",
+        "queue_position": 10
+      },
+      {
+        "event_id": "event-10",
+        "queue_position": 11
+      }
+    ],
+    "policy": "concurrent-producer-single-writer-sequencer-with-canonical-queue-drain",
+    "publish_count": 1,
+    "queue_drain_order": [
+      "event-00",
+      "event-01",
+      "event-02",
+      "event-03",
+      "event-04",
+      "event-05",
+      "event-06",
+      "event-07",
+      "event-08",
+      "event-09",
+      "event-10",
+      "event-11"
+    ],
+    "tampered_candidate_state": -4
+  },
+  "disposition": "rejected",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "packet_id": "candidate-state-corruption__C",
+  "prior_valid_checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reason": "single_writer_sequencer:candidate_state_mismatch_before_commit"
+}

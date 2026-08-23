@@ -1,0 +1,61 @@
+{
+  "arm_label": "A",
+  "case_id": "late-source",
+  "checkpoint_hash": null,
+  "decision_record": {
+    "arrival_log": [
+      {
+        "arrival_index": 0,
+        "event_id": "event-10"
+      },
+      {
+        "arrival_index": 1,
+        "event_id": "event-00"
+      },
+      {
+        "arrival_index": 2,
+        "event_id": "event-01"
+      },
+      {
+        "arrival_index": 3,
+        "event_id": "event-02"
+      },
+      {
+        "arrival_index": 4,
+        "event_id": "event-05"
+      },
+      {
+        "arrival_index": 5,
+        "event_id": "event-04"
+      },
+      {
+        "arrival_index": 6,
+        "event_id": "event-06"
+      },
+      {
+        "arrival_index": 7,
+        "event_id": "event-07"
+      },
+      {
+        "arrival_index": 8,
+        "event_id": "event-08"
+      },
+      {
+        "arrival_index": 9,
+        "event_id": "event-09"
+      },
+      {
+        "arrival_index": 10,
+        "event_id": "event-03"
+      }
+    ],
+    "checks": [],
+    "commit": "not_published",
+    "policy": "concurrent-producer-ssdd-canonical-commit"
+  },
+  "disposition": "deferred",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "packet_id": "late-source__A",
+  "prior_valid_checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reason": "ssdd:incomplete_or_unexpected_set:missing=['event-11'];unexpected=[]"
+}

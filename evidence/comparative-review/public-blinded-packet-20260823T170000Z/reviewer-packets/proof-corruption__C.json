@@ -1,0 +1,44 @@
+{
+  "arm_label": "C",
+  "case_id": "proof-corruption",
+  "checkpoint_hash": null,
+  "decision_record": {
+    "commit": "not_published",
+    "enqueue_log": [
+      {
+        "event_id": "event-11",
+        "queue_position": 0
+      },
+      {
+        "event_id": "event-00",
+        "queue_position": 1
+      },
+      {
+        "event_id": "event-01",
+        "queue_position": 2
+      },
+      {
+        "event_id": "event-02",
+        "queue_position": 3
+      },
+      {
+        "event_id": "event-04",
+        "queue_position": 4
+      },
+      {
+        "event_id": "event-03",
+        "queue_position": 5
+      },
+      {
+        "event_id": "event-05",
+        "queue_position": 6
+      }
+    ],
+    "policy": "concurrent-producer-single-writer-sequencer"
+  },
+  "disposition": "rejected",
+  "manifest_hash": "566b4e09c91a35c26f1ad3236db76cb451a78158034679c67782bcc861420170",
+  "packet_id": "proof-corruption__C",
+  "prior_valid_checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reason": "single_writer_sequencer:invalid_proof:event-05"
+}
