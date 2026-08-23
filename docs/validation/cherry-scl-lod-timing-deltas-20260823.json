@@ -1,0 +1,110 @@
+{
+  "source_domain": "native_reference_wallclock",
+  "source_limitation": "Wall-clock values and modeled byte counts are reference-model measurements, not NIC bandwidth, distributed convergence, or hardware timing.",
+  "scaling_endpoints": [
+    {
+      "series": "SCL-01",
+      "metric": "t_agg_us",
+      "start_condition": 8,
+      "end_condition": 128,
+      "start_mean_us": 2.205,
+      "end_mean_us": 29.55,
+      "delta_mean_us": 27.345,
+      "percent_change": 1240.136
+    },
+    {
+      "series": "SCL-01",
+      "metric": "t_fuse_us",
+      "start_condition": 8,
+      "end_condition": 128,
+      "start_mean_us": 0.805,
+      "end_mean_us": 0.739,
+      "delta_mean_us": -0.066,
+      "percent_change": -8.199
+    },
+    {
+      "series": "SCL-01",
+      "metric": "t_ssc_us",
+      "start_condition": 8,
+      "end_condition": 128,
+      "start_mean_us": 9.143,
+      "end_mean_us": 147.336,
+      "delta_mean_us": 138.193,
+      "percent_change": 1511.462
+    },
+    {
+      "series": "SCL-01",
+      "metric": "t_total_us",
+      "start_condition": 8,
+      "end_condition": 128,
+      "start_mean_us": 12.152,
+      "end_mean_us": 177.625,
+      "delta_mean_us": 165.473,
+      "percent_change": 1361.694
+    },
+    {
+      "series": "SCL-01",
+      "metric": "events_per_second",
+      "start_condition": 8,
+      "end_condition": 128,
+      "start_value": 793259.67,
+      "end_value": 872231.98,
+      "delta_value": 78972.31,
+      "percent_change": 9.955
+    }
+  ],
+  "load_endpoints": [
+    {
+      "series": "LOD-01",
+      "metric": "t_agg_us",
+      "start_condition": 1000,
+      "end_condition": 100000,
+      "start_mean_us": 0.16,
+      "end_mean_us": 5.921,
+      "delta_mean_us": 5.761,
+      "percent_change": 3600.625
+    },
+    {
+      "series": "LOD-01",
+      "metric": "t_fuse_us",
+      "start_condition": 1000,
+      "end_condition": 100000,
+      "start_mean_us": 0.593,
+      "end_mean_us": 0.559,
+      "delta_mean_us": -0.034,
+      "percent_change": -5.734
+    },
+    {
+      "series": "LOD-01",
+      "metric": "t_ssc_us",
+      "start_condition": 1000,
+      "end_condition": 100000,
+      "start_mean_us": 0.52,
+      "end_mean_us": 26.605,
+      "delta_mean_us": 26.085,
+      "percent_change": 5016.346
+    },
+    {
+      "series": "LOD-01",
+      "metric": "t_total_us",
+      "start_condition": 1000,
+      "end_condition": 100000,
+      "start_mean_us": 1.274,
+      "end_mean_us": 33.085,
+      "delta_mean_us": 31.811,
+      "percent_change": 2496.939
+    },
+    {
+      "series": "LOD-01",
+      "metric": "observed_reference_events_per_second",
+      "start_condition": 1000,
+      "end_condition": 100000,
+      "start_value": 296198,
+      "end_value": 900909.5,
+      "delta_value": 604711.5,
+      "percent_change": 204.158
+    }
+  ],
+  "jitter_available": false,
+  "jitter_reason": "The retained JSON stores timing means per point, not per-epoch timing samples or a distribution."
+}
