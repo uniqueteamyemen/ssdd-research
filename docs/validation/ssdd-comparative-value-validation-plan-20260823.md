@@ -3,6 +3,8 @@
 **Status:** Planned. No comparative result is reported in this document.  
 **Question:** Does SSDD provide a clearer or simpler semantic-commit containment capability than credible conventional alternatives for the same shared-memory engineering problem?
 
+**Relationship to the completed Cherry corpus:** This plan is a future comparative-value/superiority experiment. It is not a prerequisite for, and does not reopen, the completed positive mechanism evidence that SSDD preserves a declared canonical result or contains a declared invalid candidate across the retained reference, controlled gem5, and KVM-to-Timing SimCXL domains.
+
 ## 1. Fixed engineering scenario
 
 The comparison uses one bounded task: several producers contribute declared event records to a shared checkpoint. A consumer/system must decide whether to publish the next shared checkpoint. The same admitted event set may arrive in different orders, one producer may be late, an exact event key may collide, an input/proof may be corrupted, or memory access may use one of the declared simulation modes.
